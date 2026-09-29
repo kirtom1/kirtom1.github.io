@@ -12,3 +12,63 @@
 .footer{padding:62px 7vw 23px}.footer-top{display:grid;grid-template-columns:1fr 1fr 1fr;align-items:start;padding-bottom:76px}.footer-intro{font-size:24px;letter-spacing:-.06em;line-height:.95}.whatsapp-link{justify-self:end;display:grid;grid-template-columns:auto auto;gap:8px 20px;border-bottom:1px solid var(--moss);padding-bottom:9px}.whatsapp-link span{grid-column:1/-1;font:10px var(--mono);text-transform:uppercase;color:var(--moss)}.whatsapp-link strong{font-weight:500;font-size:14px}.whatsapp-link b{font-size:18px;font-weight:400}.footer-grid{border-top:1px solid var(--line-dark);padding:29px 0 82px;display:grid;grid-template-columns:1fr 1.2fr 1fr 1fr;gap:30px}.footer-label{color:#737971;display:block;margin-bottom:18px}.footer-grid p,.footer-grid a{font-size:12px;line-height:1.65;color:#c6c9c0;display:block;margin:0}.footer-grid a+a{margin-top:4px}.footer-bottom{border-top:1px solid var(--line-dark);padding-top:18px;display:grid;grid-template-columns:1fr 1fr 1fr;font:9px var(--mono);color:#747a70}.footer-bottom span:nth-child(2){text-align:center}.footer-bottom a{text-align:right;color:var(--moss)}
 @media(max-width:800px){.nav-wrap{padding:0 14px;top:12px}.dock{grid-template-columns:1fr auto;height:52px;padding-left:13px}.nav-links{display:none}.dock>.button{display:none}.menu-toggle{display:flex;flex-direction:column;gap:5px;justify-self:end;padding:12px}.menu-toggle span{display:block;width:20px;height:1px;background:white}.nav.is-open{display:block;position:absolute;top:62px;left:14px;right:14px;height:auto;padding:25px;background:rgba(13,13,13,.95)}.nav.is-open .nav-links{display:flex;flex-direction:column;gap:20px}.nav.is-open .button{display:inline-flex;margin-top:25px}.hero{min-height:670px}.hero-content{padding:0 7vw 75px}.hero-grid{background-size:50% 100%,100% 33%}.hero-bottom{grid-template-columns:1fr auto}.hero-note{display:none}.scroll-cue{right:12px}.intro,.contact{display:block}.intro{padding:95px 7vw 100px}.intro .section-label{margin-bottom:70px}.intro-main{margin-bottom:52px}.intro-image{min-height:390px}.intro-caption{padding-bottom:0}.facilities,.experiences,.tariff,.voices{padding:95px 7vw}.section-head{margin-bottom:50px}.section-kicker{font-size:25px}.facility-grid{display:block}.facility-item,.facility-item:nth-child(odd),.facility-item:nth-child(even){min-height:130px;border-right:0;padding:23px 0;grid-template-columns:55px 1fr 25px}.facility-item:hover{padding-left:9px;padding-right:9px}.experience-grid{grid-template-columns:1fr}.experience-card{height:450px}.experience-large{height:500px}.tariff-layout{display:block}.rate-highlight{border-right:0;border-bottom:1px solid var(--line);padding:38px 0}.rate-table{padding:0}.table-row{grid-template-columns:.8fr 1fr .7fr;gap:10px;font-size:11px}.tariff-foot{display:block;line-height:1.8}.tariff-foot strong{display:block;margin-top:15px}.marquee blockquote{white-space:normal;width:85vw;padding:32px 30px}.marquee cite{display:block;margin:15px 0 0}.contact-visual{min-height:370px}.contact-panel{padding:75px 7vw 90px}.footer-top,.footer-grid{grid-template-columns:1fr 1fr}.footer-top{gap:40px;padding-bottom:60px}.footer-intro{grid-column:1/-1;grid-row:1}.footer-brand{grid-row:2}.whatsapp-link{grid-row:2}.footer-grid{padding-bottom:60px}.footer-bottom{grid-template-columns:1fr;gap:12px}.footer-bottom span:nth-child(2),.footer-bottom a{text-align:left}}
 @media(max-width:450px){h1{font-size:20vw}.hero-copy{font-size:12px}.circle-link{width:44px;height:44px}.footer-top,.footer-grid{display:block}.footer-brand,.whatsapp-link{margin-top:32px}.footer-grid>div+div{margin-top:30px}}
+
+/* Tariff */
+.tariff .section-kicker i{font-style:normal;color:#7d9270}
+.tariff-overview{display:grid;grid-template-columns:.9fr 1.1fr;border:1px solid var(--line)}
+.tariff-rate-card{padding:42px;background:#e9eee4;display:flex;flex-direction:column;align-items:flex-start}
+.tariff-rate-card .eyebrow,.tariff-guest-card .eyebrow,.tariff-seasonal .eyebrow{color:#72796d;margin-bottom:24px}
+.tariff-price{font-size:clamp(43px,5vw,68px);font-weight:600;letter-spacing:-.085em;line-height:1}
+.tariff-price span{font:11px var(--mono);letter-spacing:0;color:#6e726b;white-space:nowrap}
+.tariff-occupancy{font-size:12px;color:#666b63;margin:14px 0 29px}
+.tariff-occupancy span{padding:0 5px;color:#9aaf8b}
+.tariff-inclusion{width:100%;display:flex;gap:13px;align-items:flex-start;border-top:1px solid #d2d9ca;padding:17px 0 24px;margin-top:auto}
+.tariff-inclusion>span{color:#7d9270;font-size:17px}
+.tariff-inclusion p{font-size:11px;line-height:1.6;color:#62685f;margin:0}
+.tariff-inclusion strong{color:var(--ink);font-weight:700}
+.tariff-rate-card .button{margin-top:5px}
+.tariff-guest-card{padding:42px 46px}
+.tariff-guest-card h3{font-size:27px;letter-spacing:-.06em;margin:0 0 22px}
+.guest-rates{margin:0}
+.guest-rates>div{display:grid;grid-template-columns:.85fr 1.15fr;gap:20px;border-top:1px solid var(--line);padding:15px 0}
+.guest-rates dt{font-size:11px;font-weight:700}
+.guest-rates dd{font-size:11px;line-height:1.55;color:#666b63;margin:0}
+.guest-rates dd strong{color:var(--ink);font-size:13px}
+.tariff-services{padding-top:69px}
+.tariff-services-heading{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px}
+.tariff-services-heading .eyebrow{color:#73786f;margin:0}
+.tariff-services-heading>span{font-size:12px;color:#777b74}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.service-card{padding:22px 25px 25px 0}
+.service-card+.service-card{border-left:1px solid var(--line);padding-left:25px}
+.service-number{font:10px var(--mono);color:#8b9087}
+.service-card h3{font-size:17px;letter-spacing:-.04em;margin:19px 0 10px}
+.service-card p{font-size:11px;line-height:1.7;color:#696e67;margin:0}
+.tariff-seasonal{margin-top:25px;background:var(--charcoal);color:var(--paper);padding:25px 30px;display:flex;justify-content:space-between;align-items:center;gap:30px}
+.tariff-seasonal .eyebrow{color:var(--moss);margin-bottom:9px}
+.tariff-seasonal>div:first-child>p:last-child{font-size:15px;margin:0}
+.tariff-contact-links{display:flex;gap:30px}
+.tariff-contact-links a{font:10px var(--mono);text-transform:uppercase;color:var(--moss)}
+.tariff-contact-links a span{display:block;color:var(--paper);font:11px var(--sans);text-transform:none;margin:7px 0 0}
+.tariff-contact-links a:hover span{color:var(--moss)}
+@media(max-width:800px){
+  .tariff-overview{grid-template-columns:1fr}
+  .tariff-rate-card{padding:34px}
+  .tariff-guest-card{padding:34px}
+  .tariff-services{padding-top:52px}
+  .service-grid{grid-template-columns:1fr}
+  .service-card,.service-card+.service-card{padding:21px 0;border-left:0}
+  .service-card+.service-card{border-top:1px solid var(--line)}
+  .service-card h3{margin:11px 0 8px}
+  .tariff-seasonal{align-items:flex-start;flex-direction:column;gap:22px}
+}
+@media(max-width:450px){
+  .tariff-rate-card,.tariff-guest-card{padding:26px 22px}
+  .tariff-price{font-size:48px}
+  .tariff-price span{font-size:10px}
+  .guest-rates>div{grid-template-columns:1fr;gap:6px}
+  .tariff-services-heading{display:block}
+  .tariff-services-heading>span{display:block;margin-top:10px}
+  .tariff-seasonal{padding:23px 21px}
+  .tariff-contact-links{flex-direction:column;gap:17px}
+}

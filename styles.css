@@ -487,3 +487,140 @@ h1 span{
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+.tariff-poster-section{
+  position:relative;
+  padding:clamp(92px,12vw,150px) 24px;
+  isolation:isolate;
+  background:
+    radial-gradient(ellipse at 12% 14%,rgba(66,229,220,.2),transparent 32%),
+    radial-gradient(ellipse at 88% 82%,rgba(117,104,255,.15),transparent 34%),
+    linear-gradient(145deg,#eaf8ff,#f3efff 57%,#e8fff6);
+}
+.tariff-poster{
+  width:min(100%,768px);
+  margin:0 auto;
+  padding:10px;
+  overflow:hidden;
+  border:1px solid rgba(128,165,214,.32);
+  border-radius:24px;
+  background:rgba(255,255,255,.74);
+  box-shadow:0 28px 80px rgba(21,49,100,.2),0 0 46px rgba(66,229,220,.12);
+  -webkit-backdrop-filter:blur(16px);
+  backdrop-filter:blur(16px);
+}
+.tariff-poster a{display:block;border-radius:16px;overflow:hidden}
+.tariff-poster img{display:block;width:100%;height:auto}
+.tariff-poster a:focus-visible{outline-offset:-4px}
+.tariff-poster figcaption{padding:12px 8px 2px;color:#586e89;font:10px var(--mono);letter-spacing:.08em;text-align:center;text-transform:uppercase}
+@media(max-width:520px){
+  .tariff-poster-section{padding:88px 12px}
+  .tariff-poster{padding:6px;border-radius:17px}
+  .tariff-poster a{border-radius:11px}
+  .tariff-poster figcaption{font-size:9px;padding:10px 4px 2px}
+}
+
+/* High-contrast type for every color surface */
+.section-light .section-label,
+.section-light .section-label span,
+.facilities .section-label,
+.facilities .section-label span{
+  color:#344963;
+  font-weight:600;
+}
+.section-light .eyebrow,
+.facilities .eyebrow{
+  color:#354cbd;
+  font-weight:700;
+}
+.section-dark .section-label,
+.section-dark .section-label span{
+  color:#d7eaff;
+  font-weight:600;
+}
+.section-dark .eyebrow{
+  color:#b6fff6;
+  font-weight:700;
+}
+.hero-eyebrow{
+  color:#f0fbff;
+  font-weight:600;
+  text-shadow:0 1px 8px rgba(0,12,30,.75);
+}
+.hero-copy,.intro-text,.experience-overlay p{
+  color:#e5f1ff;
+  font-weight:600;
+}
+.hero-note,.scroll-cue,.intro-caption{
+  color:#e4f1ff;
+  font-weight:600;
+}
+.facility-item p,.item-no,.service-number,.service-card p,
+.tariff-services-heading>span,.guest-rates dd,.tariff-poster figcaption{
+  color:#344963;
+  font-weight:600;
+}
+.facility-item h3,.service-card h3,.guest-rates dt,.tariff-guest-card h3{
+  color:#102844;
+}
+.tariff .section-kicker,
+.facilities .section-kicker{
+  color:#102544;
+}
+.tariff .section-kicker i,
+.facilities .section-kicker i{
+  color:#3547bb;
+}
+.tariff-rate-card .eyebrow,
+.tariff-guest-card .eyebrow,
+.tariff-services-heading .eyebrow{
+  color:#354cbd;
+  font-weight:700;
+}
+.tariff-occupancy,.tariff-inclusion p,.rate-highlight p:not(.eyebrow){
+  color:#344963;
+  font-weight:600;
+}
+.tariff-price span,.rate span,.rate-highlight small,.table-row small{
+  color:#405570;
+  font-weight:600;
+}
+.tariff-occupancy span,.tariff-guest-card .guest-rates dd strong{
+  color:#3547bb;
+}
+.service-number{color:#3547bb}
+.tariff-seasonal .eyebrow{
+  color:#bdfff4;
+  font-weight:700;
+}
+.tariff-seasonal>div:first-child>p:last-child,
+.tariff-contact-links a span{
+  color:#fff;
+  font-weight:600;
+}
+.tariff-contact-links a{
+  color:#bdfff4;
+  font-weight:700;
+}
+.contact-panel>p,.inquiry-form label{
+  color:#344963;
+  font-weight:600;
+}
+.inquiry-form input::placeholder,
+.inquiry-form textarea::placeholder{
+  color:#556b85;
+  opacity:1;
+}
+.footer-label{
+  color:#c5ddf3;
+  font-weight:700;
+}
+.footer-grid p,.footer-grid a{
+  color:#e3effc;
+  font-weight:600;
+}
+.footer-bottom,.footer-bottom a{color:#d2e3f5}
+.marquee cite{font-weight:600}
+.nav-links{color:#f0f7ff}
+.brand em,.footer-brand em{color:#d9ff98}
+.service-card h3{font-weight:800}
+.tariff-poster a{box-shadow:0 0 0 1px rgba(55,76,131,.12)}

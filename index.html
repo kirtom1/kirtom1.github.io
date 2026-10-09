@@ -129,19 +129,26 @@
 
     <main id="main">
 <!-- @section:hero -->
-      <section class="container title-row" id="top" aria-labelledby="villa-name">
-        <h1 id="villa-name">Blue Hills View</h1>
-        <p class="title-sub">Family-run serviced villa near Silent Valley National Park</p>
-        <div class="title-meta">
-          <!-- TODO(owner): add "N guests · N bedrooms · N beds · N baths" once known. Only poster facts shown below. -->
-          <p class="summary">Mountain-facing deluxe room · Double occupancy · Breakfast for 2 included</p>
-          <a class="title-location" href="#location"><svg class="icon" aria-hidden="true"><use href="#i-pin" /></svg>Paloor, Attapady, Kerala</a>
-        </div>
-        <div class="title-actions">
-          <button class="btn-text" type="button" id="share-btn"><svg class="icon" aria-hidden="true"><use href="#i-share" /></svg>Share</button>
-          <a class="btn-text" href="https://wa.me/918089000159" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-chat" /></svg>WhatsApp</a>
-        </div>
-      </section>
+<section class="hero section section-white" id="top" aria-labelledby="villa-name">
+  <div class="container hero-text">
+    <h1 id="villa-name">Blue Hills View</h1>
+    <p class="subhead">Family-run serviced villa near Silent Valley National Park</p>
+    <!-- TODO(owner): add "N guests · N bedrooms · N beds · N baths" once known. Only poster facts shown below. -->
+    <p class="hero-meta">Mountain-facing deluxe room · Double occupancy · Breakfast for 2 included</p>
+    <div class="cta-row">
+      <a class="btn" href="#book">Check availability</a>
+      <a class="link-arrow" href="#location">Paloor, Attapady, Kerala</a>
+    </div>
+    <div class="hero-actions">
+      <button class="hero-action" type="button" id="share-btn"><svg class="icon" aria-hidden="true"><use href="#i-share" /></svg>Share</button>
+      <a class="hero-action" href="https://wa.me/918089000159" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-chat" /></svg>WhatsApp</a>
+    </div>
+  </div>
+  <picture>
+    <source type="image/webp" srcset="assets/photos/villa-evening-640.webp 640w, assets/photos/villa-evening-1000.webp 1000w" sizes="100vw" />
+    <img class="photo-full hero-photo" src="assets/villa-evening.jpg" alt="The villa at night, its porch lit with festive lights and stars" width="1000" height="752" fetchpriority="high" />
+  </picture>
+</section>
 <!-- /@section:hero -->
 <!-- @section:about -->
 <section class="block about">

@@ -7,6 +7,9 @@
 
 img, picture, video, iframe, svg { display: block; max-width: 100%; }
 
+/* Section styles set display on elements the script hides; hidden must always win. */
+[hidden] { display: none !important; }
+
 /* ---------- Tokens ---------- */
 :root {
   /* Colours */
@@ -20,6 +23,7 @@ img, picture, video, iframe, svg { display: block; max-width: 100%; }
   --muted-on-dark: #a1a1a6; /* secondary text on the black band */
   --nav-bg: rgba(255, 255, 255, 0.85);
   --scrim: rgba(0, 0, 0, 0.92); /* photo viewer backdrop */
+  --error: #e30000; /* form errors only */
 
   /* Font stack (system, no web fonts) */
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -1331,6 +1335,273 @@ address { font-style: normal; }
   }
 }
 /* /@section:nav */
+
+/* @section:booking */
+.booking-band .booking {
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.booking-band .date-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-3);
+}
+
+.booking-band .field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  background: var(--grey);
+  border-radius: var(--sp-3);
+  padding: var(--sp-2) var(--sp-4);
+  border: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.booking-band .field-label {
+  font-size: var(--fs-small);
+  font-weight: 600;
+}
+
+.booking-band .field input[type="date"] {
+  border: 0;
+  background: none;
+  width: 100%;
+  min-height: 32px;
+  font-size: var(--fs-body);
+}
+
+.booking-band .field.is-invalid {
+  box-shadow: inset 0 0 0 2px var(--error);
+}
+
+.booking-band .guests {
+  margin-top: var(--sp-3);
+}
+
+.booking-band .guests-toggle {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.booking-band .guests-toggle .field-label {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.booking-band .guests-toggle #guests-summary {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.booking-band .guests-toggle .chevron {
+  grid-row: 1 / span 2;
+  grid-column: 2;
+}
+
+.booking-band .guests-toggle[aria-expanded="true"] .chevron {
+  transform: rotate(180deg);
+}
+
+.booking-band .guests-panel {
+  padding: var(--sp-4) var(--sp-1) 0;
+}
+
+.booking-band .stepper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--sp-3) 0;
+}
+
+.booking-band .stepper-label {
+  display: block;
+  font-weight: 600;
+}
+
+.booking-band .stepper-hint {
+  display: block;
+  font-size: var(--fs-small);
+  color: var(--muted);
+}
+
+.booking-band .stepper-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.booking-band .stepper-controls button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 0;
+  background: var(--grey);
+  color: var(--text);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.booking-band .stepper-controls button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.booking-band .stepper-controls output {
+  min-width: 2ch;
+  text-align: center;
+}
+
+.booking-band .stepper-note {
+  font-size: var(--fs-small);
+  color: var(--muted);
+  margin-top: var(--sp-2);
+}
+
+.booking-band .form-error {
+  color: var(--error);
+  font-size: var(--fs-small);
+  min-height: 1.5em;
+  margin: var(--sp-3) 0 0;
+}
+
+.booking-band .btn-block {
+  width: 100%;
+  margin-top: var(--sp-3);
+}
+
+.booking-band .cta-note {
+  font-size: var(--fs-small);
+  color: var(--muted);
+  text-align: center;
+  margin-top: var(--sp-3);
+}
+
+.booking-band .estimate {
+  margin-top: var(--sp-5);
+}
+
+.booking-band .estimate-empty {
+  color: var(--muted);
+  font-size: var(--fs-small);
+  text-align: center;
+}
+
+.booking-band .estimate-lines div {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  padding: var(--sp-1) 0;
+}
+
+.booking-band .estimate-lines dt {
+  color: var(--muted);
+}
+
+.booking-band .estimate-total {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  margin-top: var(--sp-3);
+  padding-top: var(--sp-3);
+  border-top: 1px solid var(--grey);
+  font-weight: 600;
+}
+
+.booking-band .estimate-total small {
+  display: block;
+  font-weight: 400;
+  font-size: var(--fs-small);
+  color: var(--muted);
+}
+
+.booking-band .estimate-note {
+  font-size: var(--fs-small);
+  color: var(--muted);
+  margin-top: var(--sp-3);
+}
+
+.booking-band .btn-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-top: var(--sp-5);
+  color: var(--blue);
+  font-size: var(--fs-small);
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .booking-band .booking {
+    max-width: 480px;
+  }
+}
+
+/* Orchestrator fixes (not written by the local model) */
+/* Date inputs keep a wide minimum width on phones; let the columns and inputs shrink. */
+.booking-band .date-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.booking-band .date-fields .field { padding-left: var(--sp-3); padding-right: var(--sp-3); }
+.booking-band .field input { min-width: 0; }
+/* /@section:booking */
+
+/* @section:mobilebar */
+.mobile-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  padding: var(--sp-3) var(--gutter);
+  padding-bottom: max(var(--sp-3), env(safe-area-inset-bottom));
+  background: var(--nav-bg);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  transition: transform 0.3s ease;
+}
+
+.mobile-bar.is-hidden {
+  transform: translateY(100%);
+}
+
+.mobile-bar .bar-price {
+  font-size: var(--fs-small);
+  line-height: 1.3;
+}
+
+.mobile-bar .bar-price strong {
+  font-size: var(--fs-body);
+  font-weight: 600;
+}
+
+.mobile-bar .bar-sub {
+  display: block;
+  color: var(--muted);
+}
+
+@media (min-width: 768px) {
+  .mobile-bar {
+    display: none;
+  }
+}
+
+/* Orchestrator fixes (not written by the local model) */
+/* Keep the button on one line; the price block takes the squeeze. */
+.mobile-bar .btn { flex: none; white-space: nowrap; padding-left: var(--sp-4); padding-right: var(--sp-4); }
+.mobile-bar .bar-price { min-width: 0; }
+.mobile-bar .bar-sub { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* /@section:mobilebar */
 
 /* @end-sections */
 

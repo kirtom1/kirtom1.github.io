@@ -390,77 +390,77 @@
 </section>
 <!-- /@section:tariff -->
 <!-- @section:booking -->
-        <aside class="booking-col" aria-label="Booking enquiry">
-          <div class="booking-backdrop" id="booking-backdrop" hidden></div>
-          <div class="booking" id="booking" aria-labelledby="booking-title">
-            <div class="sheet-head">
-              <h2 id="booking-title" class="sheet-title">Check availability</h2>
-              <button class="icon-btn" type="button" id="close-sheet" aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-x" /></svg></button>
+<section class="booking-band section section-grey" id="book" aria-labelledby="booking-title">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="headline" id="booking-title">Check availability</h2>
+      <p class="subhead"><strong>₹4,000</strong> night · plus GST · breakfast for 2</p>
+    </div>
+    <div class="tile booking" id="booking">
+      <form class="booking-form" id="booking-form" novalidate>
+        <div class="date-fields">
+          <label class="field">
+            <span class="field-label">Check-in</span>
+            <input type="date" id="checkin" name="checkin" required />
+          </label>
+          <label class="field">
+            <span class="field-label">Check-out</span>
+            <input type="date" id="checkout" name="checkout" required />
+          </label>
+        </div>
+        <div class="guests">
+          <button class="field guests-toggle" type="button" id="guests-toggle" aria-expanded="false" aria-controls="guests-panel">
+            <span class="field-label">Guests</span>
+            <span id="guests-summary">2 adults</span>
+            <svg class="icon chevron" aria-hidden="true"><use href="#i-down" /></svg>
+          </button>
+          <div class="guests-panel" id="guests-panel" hidden>
+            <div class="stepper" data-key="adults" data-min="1" data-max="10">
+              <div><span class="stepper-label" id="adults-label">Adults</span><span class="stepper-hint">Ages 12 and up</span></div>
+              <div class="stepper-controls">
+                <button type="button" data-step="-1" aria-label="Remove an adult"><svg class="icon" aria-hidden="true"><use href="#i-minus" /></svg></button>
+                <output aria-labelledby="adults-label" aria-live="polite">2</output>
+                <button type="button" data-step="1" aria-label="Add an adult"><svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></button>
+              </div>
             </div>
-            <p class="booking-price"><strong>₹4,000</strong> <span>night</span><span class="booking-price-note">plus GST · breakfast for 2</span></p>
-            <form class="booking-form" id="booking-form" novalidate>
-              <div class="date-fields">
-                <label class="field">
-                  <span class="field-label">Check-in</span>
-                  <input type="date" id="checkin" name="checkin" required />
-                </label>
-                <label class="field">
-                  <span class="field-label">Check-out</span>
-                  <input type="date" id="checkout" name="checkout" required />
-                </label>
+            <div class="stepper" data-key="children" data-min="0" data-max="6">
+              <div><span class="stepper-label" id="children-label">Children</span><span class="stepper-hint">Ages 5 to 11</span></div>
+              <div class="stepper-controls">
+                <button type="button" data-step="-1" aria-label="Remove a child aged 5 to 11"><svg class="icon" aria-hidden="true"><use href="#i-minus" /></svg></button>
+                <output aria-labelledby="children-label" aria-live="polite">0</output>
+                <button type="button" data-step="1" aria-label="Add a child aged 5 to 11"><svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></button>
               </div>
-              <div class="guests">
-                <button class="field guests-toggle" type="button" id="guests-toggle" aria-expanded="false" aria-controls="guests-panel">
-                  <span class="field-label">Guests</span>
-                  <span id="guests-summary">2 adults</span>
-                  <svg class="icon chevron" aria-hidden="true"><use href="#i-down" /></svg>
-                </button>
-                <div class="guests-panel" id="guests-panel" hidden>
-                  <div class="stepper" data-key="adults" data-min="1" data-max="10">
-                    <div><span class="stepper-label" id="adults-label">Adults</span><span class="stepper-hint">Ages 12 and up</span></div>
-                    <div class="stepper-controls">
-                      <button type="button" data-step="-1" aria-label="Remove an adult"><svg class="icon" aria-hidden="true"><use href="#i-minus" /></svg></button>
-                      <output aria-labelledby="adults-label" aria-live="polite">2</output>
-                      <button type="button" data-step="1" aria-label="Add an adult"><svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></button>
-                    </div>
-                  </div>
-                  <div class="stepper" data-key="children" data-min="0" data-max="6">
-                    <div><span class="stepper-label" id="children-label">Children</span><span class="stepper-hint">Ages 5 to 11</span></div>
-                    <div class="stepper-controls">
-                      <button type="button" data-step="-1" aria-label="Remove a child aged 5 to 11"><svg class="icon" aria-hidden="true"><use href="#i-minus" /></svg></button>
-                      <output aria-labelledby="children-label" aria-live="polite">0</output>
-                      <button type="button" data-step="1" aria-label="Add a child aged 5 to 11"><svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></button>
-                    </div>
-                  </div>
-                  <div class="stepper" data-key="infants" data-min="0" data-max="6">
-                    <div><span class="stepper-label" id="infants-label">Little ones</span><span class="stepper-hint">Under 5, stay free</span></div>
-                    <div class="stepper-controls">
-                      <button type="button" data-step="-1" aria-label="Remove a child under 5"><svg class="icon" aria-hidden="true"><use href="#i-minus" /></svg></button>
-                      <output aria-labelledby="infants-label" aria-live="polite">0</output>
-                      <button type="button" data-step="1" aria-label="Add a child under 5"><svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></button>
-                    </div>
-                  </div>
-                  <p class="stepper-note">The room rate covers two guests. Guests above 11 need an extra bed.</p>
-                </div>
+            </div>
+            <div class="stepper" data-key="infants" data-min="0" data-max="6">
+              <div><span class="stepper-label" id="infants-label">Little ones</span><span class="stepper-hint">Under 5, stay free</span></div>
+              <div class="stepper-controls">
+                <button type="button" data-step="-1" aria-label="Remove a child under 5"><svg class="icon" aria-hidden="true"><use href="#i-minus" /></svg></button>
+                <output aria-labelledby="infants-label" aria-live="polite">0</output>
+                <button type="button" data-step="1" aria-label="Add a child under 5"><svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></button>
               </div>
-
-              <p class="form-error" id="booking-error" role="alert"></p>
-
-              <a class="btn btn-primary btn-block" id="whatsapp-cta" href="https://wa.me/918089000159" target="_blank" rel="noopener">
-                <svg class="icon" aria-hidden="true"><use href="#i-chat" /></svg>Check availability
-              </a>
-              <p class="cta-note">Opens WhatsApp with your dates filled in. The hosts confirm by hand. Nothing is charged here.</p>
-
-              <div class="estimate" id="estimate" aria-live="polite">
-                <p class="estimate-empty" id="estimate-empty">Add your dates to see an estimate.</p>
-                <dl class="estimate-lines" id="estimate-lines"></dl>
-                <p class="estimate-total" id="estimate-total" hidden></p>
-              </div>
-
-              <a class="btn-link" id="email-cta" href="mailto:booking@bluehillsview.com?subject=Booking%20enquiry"><svg class="icon" aria-hidden="true"><use href="#i-mail" /></svg>Or send the enquiry by email</a>
-            </form>
+            </div>
+            <p class="stepper-note">The room rate covers two guests. Guests above 11 need an extra bed.</p>
           </div>
-        </aside>
+        </div>
+
+        <p class="form-error" id="booking-error" role="alert"></p>
+
+        <a class="btn btn-primary btn-block" id="whatsapp-cta" href="https://wa.me/918089000159" target="_blank" rel="noopener">
+          <svg class="icon" aria-hidden="true"><use href="#i-chat" /></svg>Check availability
+        </a>
+        <p class="cta-note">Opens WhatsApp with your dates filled in. The hosts confirm by hand. Nothing is charged here.</p>
+
+        <div class="estimate" id="estimate" aria-live="polite">
+          <p class="estimate-empty" id="estimate-empty">Add your dates to see an estimate.</p>
+          <dl class="estimate-lines" id="estimate-lines"></dl>
+          <p class="estimate-total" id="estimate-total" hidden></p>
+        </div>
+
+        <a class="btn-link" id="email-cta" href="mailto:booking@bluehillsview.com?subject=Booking%20enquiry"><svg class="icon" aria-hidden="true"><use href="#i-mail" /></svg>Or send the enquiry by email</a>
+      </form>
+    </div>
+  </div>
+</section>
 <!-- /@section:booking -->
 <!-- @section:reviews -->
 <section class="reviews section section-white" id="reviews" aria-labelledby="reviews-title">
@@ -594,10 +594,10 @@
 </footer>
 <!-- /@section:footer -->
 <!-- @section:mobilebar -->
-    <div class="mobile-bar">
-      <p><strong id="bar-price">₹4,000</strong> <span id="bar-unit">night</span><span class="bar-sub" id="bar-sub">plus GST · breakfast for 2</span></p>
-      <button class="btn btn-primary" type="button" id="open-sheet" aria-controls="booking" aria-expanded="false">Check availability</button>
-    </div>
+<div class="mobile-bar" id="mobile-bar">
+  <p class="bar-price"><strong id="bar-price">₹4,000</strong> <span id="bar-unit">night</span><span class="bar-sub" id="bar-sub">plus GST · breakfast for 2</span></p>
+  <a class="btn" id="bar-cta" href="#book">Check availability</a>
+</div>
 <!-- /@section:mobilebar -->
 <!-- @section:tour -->
 <dialog class="photo-tour" id="photo-tour" aria-labelledby="tour-title">

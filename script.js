@@ -264,43 +264,24 @@ function requireDates(e) {
 $("#whatsapp-cta").addEventListener("click", requireDates);
 $("#email-cta").addEventListener("click", requireDates);
 
-/* ---------- Bottom sheet (below 960px) ---------- */
-const sheet = $("#booking");
-const backdrop = $("#booking-backdrop");
-const openSheetBtn = $("#open-sheet");
-const desktop = window.matchMedia("(min-width: 960px)");
+/* ---------- Booking band and mobile bar ---------- */
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const bookBand = $("#book");
 
-function setSheet(open) {
-  sheet.classList.toggle("is-open", open);
-  backdrop.hidden = !open;
-  document.body.classList.toggle("sheet-open", open);
-  openSheetBtn.setAttribute("aria-expanded", String(open));
-  if (open) {
-    sheet.setAttribute("role", "dialog");
-    sheet.setAttribute("aria-modal", "true");
-    // Wait for the slide-in so focus lands on a visible element.
-    requestAnimationFrame(() => (checkin.value ? $("#whatsapp-cta") : checkin).focus({ preventScroll: true }));
-  } else {
-    sheet.removeAttribute("role");
-    sheet.removeAttribute("aria-modal");
-  }
-}
+// Every "Check availability" link lands on the card with check-in ready to fill.
+$$('a[href="#book"]').forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    closeMenu();
+    bookBand.scrollIntoView({ behavior: reduceMotion.matches ? "auto" : "smooth" });
+    (checkin.value ? $("#whatsapp-cta") : checkin).focus({ preventScroll: true });
+  });
+});
 
-openSheetBtn.addEventListener("click", () => setSheet(true));
-$("#close-sheet").addEventListener("click", () => { setSheet(false); openSheetBtn.focus(); });
-backdrop.addEventListener("click", () => setSheet(false));
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && sheet.classList.contains("is-open")) { setSheet(false); openSheetBtn.focus(); }
-});
-// Keep Tab inside the open sheet.
-sheet.addEventListener("keydown", (e) => {
-  if (e.key !== "Tab" || !sheet.classList.contains("is-open")) return;
-  const items = $$("button:not([disabled]), input, a[href]", sheet).filter((el) => el.offsetParent !== null);
-  const first = items[0], last = items[items.length - 1];
-  if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-  else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
-});
-desktop.addEventListener("change", (e) => { if (e.matches) setSheet(false); });
+// The bar steps aside while the booking card itself is on screen.
+const mobileBar = $("#mobile-bar");
+new IntersectionObserver(([entry]) => mobileBar.classList.toggle("is-hidden", entry.isIntersecting))
+  .observe(bookBand);
 
 /* ---------- Phone menu ---------- */
 const nav = $(".site-nav");

@@ -452,6 +452,37 @@ address { font-style: normal; }
 }
 /* /@section:highlights */
 
+/* @section:about */
+.about {
+  padding-bottom: 0;
+}
+
+.about .about-text {
+  text-align: center;
+}
+
+.about .about-copy {
+  margin: var(--sp-5) auto 0;
+  max-width: 640px;
+  color: var(--white);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+.about .about-photo {
+  width: 100%;
+  height: auto;
+  margin-top: var(--sp-8);
+}
+
+@media (min-width: 768px) {
+  .about .about-photo {
+    max-height: 80vh;
+    object-fit: cover;
+  }
+}
+/* /@section:about */
+
 /* @end-sections */
 
 /* ---------- Motion ---------- */

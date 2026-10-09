@@ -1192,6 +1192,146 @@ address { font-style: normal; }
 }
 /* /@section:tour */
 
+/* @section:nav */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--nav-height);
+  background: var(--nav-bg);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+.site-nav .nav-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+}
+
+.site-nav .nav-brand {
+  margin-right: auto;
+}
+
+.site-nav .nav-brand img {
+  height: 30px;
+  width: auto;
+  border-radius: var(--sp-1);
+}
+
+.site-nav .nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav .nav-links a {
+  color: var(--text);
+  font-size: var(--fs-small);
+  text-decoration: none;
+}
+
+.site-nav .nav-links a:hover {
+  color: var(--blue);
+}
+
+.site-nav .nav-book {
+  background: var(--blue);
+  color: var(--white);
+  font-size: var(--fs-small);
+  padding: var(--sp-1) var(--sp-3);
+  border-radius: 980px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-nav .nav-toggle {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-nav .nav-toggle-bars {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
+.site-nav .nav-toggle-bars::before,
+.site-nav .nav-toggle-bars::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 1.5px;
+  background: currentColor;
+  transition: transform 0.2s ease;
+}
+
+.site-nav .nav-toggle-bars::before {
+  top: 3px;
+}
+
+.site-nav .nav-toggle-bars::after {
+  top: 9px;
+}
+
+.site-nav.is-open .nav-toggle-bars::before {
+  top: 8px;
+  transform: rotate(45deg);
+}
+
+.site-nav.is-open .nav-toggle-bars::after {
+  top: 8px;
+  transform: rotate(-45deg);
+}
+
+.site-nav .nav-menu {
+  display: none;
+}
+
+.site-nav.is-open .nav-menu {
+  display: block;
+  position: absolute;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  background: var(--white);
+  padding: var(--sp-2) var(--gutter) var(--sp-5);
+}
+
+.site-nav.is-open .nav-links a {
+  display: block;
+  font-size: var(--fs-subhead);
+  font-weight: 600;
+  padding: var(--sp-3) 0;
+}
+
+@media (min-width: 768px) {
+  .site-nav .nav-toggle {
+    display: none;
+  }
+
+  .site-nav .nav-menu {
+    display: block;
+    position: static;
+  }
+
+  .site-nav .nav-links {
+    display: flex;
+    gap: var(--sp-6);
+  }
+}
+/* /@section:nav */
+
 /* @end-sections */
 
 /* ---------- Motion ---------- */

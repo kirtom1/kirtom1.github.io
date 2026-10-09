@@ -302,4 +302,28 @@ sheet.addEventListener("keydown", (e) => {
 });
 desktop.addEventListener("change", (e) => { if (e.matches) setSheet(false); });
 
+/* ---------- Phone menu ---------- */
+const nav = $(".site-nav");
+const navToggle = $("#nav-toggle");
+
+function setMenu(open) {
+  nav.classList.toggle("is-open", open);
+  navToggle.setAttribute("aria-expanded", String(open));
+}
+function closeMenu() { setMenu(false); }
+
+navToggle.addEventListener("click", () => {
+  const open = !nav.classList.contains("is-open");
+  setMenu(open);
+  if (open) $("#nav-menu a").focus();
+});
+$$("#nav-menu a").forEach((a) => a.addEventListener("click", closeMenu));
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && nav.classList.contains("is-open")) { closeMenu(); navToggle.focus(); }
+});
+document.addEventListener("click", (e) => {
+  if (nav.classList.contains("is-open") && !nav.contains(e.target)) closeMenu();
+});
+window.matchMedia("(min-width: 768px)").addEventListener("change", (e) => { if (e.matches) closeMenu(); });
+
 render();

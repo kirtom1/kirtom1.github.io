@@ -160,31 +160,44 @@
 </section>
 <!-- /@section:about -->
 <!-- @section:highlights -->
-<section class="block">
-            <ul class="highlights">
-              <li>
-                <svg class="icon icon-lg" aria-hidden="true"><use href="#i-mountain" /></svg>
-                <div><h3>Mountain-facing room with a private balcony</h3><p>Sunrise over lush green hills.</p></div>
-              </li>
-              <li>
-                <svg class="icon icon-lg" aria-hidden="true"><use href="#i-coffee" /></svg>
-                <div><h3>Breakfast is included</h3><p>Complimentary South Indian breakfast for two, every morning.</p></div>
-              </li>
-              <li>
-                <svg class="icon icon-lg" aria-hidden="true"><use href="#i-heart" /></svg>
-                <div><h3>Hosts on hand day and night</h3><p>Dedicated 24/7 hospitality from the family who run the villa.</p></div>
-              </li>
-            </ul>
-            <h2 id="amenities-title">What this place offers</h2>
-            <ul class="amenity-list">
-              <li><svg class="icon" aria-hidden="true"><use href="#i-mountain" /></svg>Mountain-facing deluxe room</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-sunrise" /></svg>Private balcony</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-coffee" /></svg>South Indian breakfast for 2, included</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-utensils" /></svg>Lunch and dinner on request</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-flame" /></svg>Campfire with wood arranged</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-snowflake" /></svg>Air conditioning (extra charge)</li>
-            </ul>
-            <button class="btn btn-outline" type="button" data-open-dialog="amenities-dialog">Show all 12 amenities</button>
+<section class="highlights section section-grey" id="amenities" aria-labelledby="amenities-title">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="headline" id="amenities-title">What this place offers</h2>
+      <p class="subhead">Everything you need. Nothing you don't.</p>
+    </div>
+    <div class="bento">
+      <article class="tile span-2 highlight-view">
+        <h3>Mountain-facing room with a private balcony</h3>
+        <p>Sunrise over lush green hills.</p>
+        <picture>
+          <source type="image/webp" srcset="assets/photos/mountain-view-640.webp 640w, assets/photos/mountain-view-1100.webp 1100w" sizes="(min-width: 768px) 940px, 100vw" />
+          <img src="assets/mountain-view.jpg" alt="Clouds drifting over the Attapady hills above green slopes" width="1100" height="620" loading="lazy" />
+        </picture>
+      </article>
+      <article class="tile">
+        <svg class="icon icon-lg" aria-hidden="true"><use href="#i-coffee" /></svg>
+        <h3>Breakfast is included</h3>
+        <p>Complimentary South Indian breakfast for two, every morning.</p>
+      </article>
+      <article class="tile">
+        <svg class="icon icon-lg" aria-hidden="true"><use href="#i-heart" /></svg>
+        <h3>Hosts on hand day and night</h3>
+        <p>Dedicated 24/7 hospitality from the family who run the villa.</p>
+      </article>
+      <article class="tile span-2 amenity-tile">
+        <ul class="amenity-list">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-mountain" /></svg>Mountain-facing deluxe room</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-sunrise" /></svg>Private balcony</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-coffee" /></svg>South Indian breakfast for 2, included</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-utensils" /></svg>Lunch and dinner on request</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-flame" /></svg>Campfire with wood arranged</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-snowflake" /></svg>Air conditioning (extra charge)</li>
+        </ul>
+        <button class="btn" type="button" data-open-dialog="amenities-dialog">Show all 12 amenities</button>
+      </article>
+    </div>
+  </div>
 </section>
 <!-- /@section:highlights -->
 <!-- @section:gallery -->

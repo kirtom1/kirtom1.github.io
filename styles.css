@@ -397,6 +397,61 @@ address { font-style: normal; }
 }
 /* /@section:hero */
 
+/* @section:highlights */
+.highlights .tile {
+  text-align: left;
+}
+
+.highlights .tile h3 {
+  font-size: var(--fs-tile);
+  font-weight: 600;
+  letter-spacing: var(--ls-tight);
+  line-height: 1.1;
+}
+
+.highlights .tile p {
+  color: var(--muted);
+  margin-top: var(--sp-2);
+}
+
+.highlights .tile .icon {
+  color: var(--blue);
+  margin-bottom: var(--sp-4);
+}
+
+.highlights .highlight-view img {
+  margin-top: var(--sp-5);
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+}
+
+.highlights .amenity-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-4) var(--sp-6);
+}
+
+.highlights .amenity-list li {
+  display: flex;
+  gap: var(--sp-3);
+  align-items: center;
+}
+
+.highlights .amenity-tile .btn {
+  margin-top: var(--sp-6);
+}
+
+@media (min-width: 768px) {
+  .highlights .amenity-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* /@section:highlights */
+
 /* @end-sections */
 
 /* ---------- Motion ---------- */

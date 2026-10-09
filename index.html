@@ -600,66 +600,66 @@
     </div>
 <!-- /@section:mobilebar -->
 <!-- @section:tour -->
-    <dialog class="photo-tour" id="photo-tour" aria-labelledby="tour-title">
-      <div class="tour-head">
-        <button class="icon-btn" type="button" data-close aria-label="Close photos"><svg class="icon" aria-hidden="true"><use href="#i-left" /></svg></button>
-        <h2 id="tour-title">All photos</h2>
+<dialog class="photo-tour" id="photo-tour" aria-labelledby="tour-title">
+  <div class="tour-head">
+    <button class="icon-btn" type="button" data-close aria-label="Close photos"><svg class="icon" aria-hidden="true"><use href="#i-left" /></svg></button>
+    <h2 id="tour-title">All photos</h2>
+  </div>
+  <div class="tour-body">
+    <nav class="tour-nav" aria-label="Photo groups">
+      <a href="#tour-villa">The villa</a><a href="#tour-campfire">Campfire</a><a href="#tour-views">Views</a><a href="#tour-surrounds">Surrounds</a>
+    </nav>
+    <!-- TODO(owner): add "Rooms" and "Food" groups once photos exist. -->
+    <section class="tour-group" id="tour-villa" aria-labelledby="tg-villa"><h3 id="tg-villa">The villa</h3>
+      <div class="tour-grid"><button type="button" data-index="0" aria-label="Open photo: the villa at night"><img src="assets/photos/villa-evening-640.webp" srcset="assets/photos/villa-evening-640.webp 640w, assets/photos/villa-evening-1000.webp 1000w" sizes="(min-width: 900px) 836px, 100vw" alt="" width="640" height="481" loading="lazy" /></button></div>
+    </section>
+    <section class="tour-group" id="tour-campfire" aria-labelledby="tg-campfire"><h3 id="tg-campfire">Campfire</h3>
+      <div class="tour-grid"><button type="button" data-index="1" aria-label="Open photo: campfire in front of the villa"><img src="assets/photos/campfire-640.webp" srcset="assets/photos/campfire-640.webp 640w, assets/photos/campfire-900.webp 900w" sizes="(min-width: 900px) 836px, 100vw" alt="" width="640" height="850" loading="lazy" /></button></div>
+    </section>
+    <section class="tour-group" id="tour-views" aria-labelledby="tg-views"><h3 id="tg-views">Views</h3>
+      <div class="tour-grid">
+        <button type="button" data-index="2" aria-label="Open photo: clouds over the hills"><img src="assets/photos/mountain-view-640.webp" srcset="assets/photos/mountain-view-640.webp 640w, assets/photos/mountain-view-1100.webp 1100w" sizes="(min-width: 900px) 836px, 100vw" alt="" width="640" height="361" loading="lazy" /></button>
+        <button type="button" data-index="3" aria-label="Open photo: forested peaks"><img src="assets/photos/mountain-hero-640.webp" srcset="assets/photos/mountain-hero-640.webp 640w, assets/photos/mountain-hero-1212.webp 1212w" sizes="(min-width: 900px) 836px, 100vw" alt="" width="640" height="361" loading="lazy" /></button>
       </div>
-      <div class="tour-body">
-        <nav class="tour-nav" aria-label="Photo groups">
-          <a href="#tour-villa">The villa</a><a href="#tour-campfire">Campfire</a><a href="#tour-views">Views</a><a href="#tour-surrounds">Surrounds</a>
-        </nav>
-        <!-- TODO(owner): add "Rooms" and "Food" groups once photos exist. -->
-        <section class="tour-group" id="tour-villa" aria-labelledby="tg-villa"><h3 id="tg-villa">The villa</h3>
-          <div class="tour-grid"><button type="button" data-index="0" aria-label="Open photo: the villa at night"><img src="assets/photos/villa-evening-640.webp" srcset="assets/photos/villa-evening-640.webp 640w, assets/photos/villa-evening-1000.webp 1000w" sizes="(min-width: 900px) 836px, 100vw" alt="" width="640" height="481" loading="lazy" /></button></div>
-        </section>
-        <section class="tour-group" id="tour-campfire" aria-labelledby="tg-campfire"><h3 id="tg-campfire">Campfire</h3>
-          <div class="tour-grid"><button type="button" data-index="1" aria-label="Open photo: campfire in front of the villa"><img src="assets/photos/campfire-640.webp" srcset="assets/photos/campfire-640.webp 640w, assets/photos/campfire-900.webp 900w" sizes="(min-width: 900px) 836px, 100vw" alt="" width="640" height="850" loading="lazy" /></button></div>
-        </section>
-        <section class="tour-group" id="tour-views" aria-labelledby="tg-views"><h3 id="tg-views">Views</h3>
-          <div class="tour-grid">
-            <button type="button" data-index="2" aria-label="Open photo: clouds over the hills"><img src="assets/photos/mountain-view-640.webp" srcset="assets/photos/mountain-view-640.webp 640w, assets/photos/mountain-view-1100.webp 1100w" sizes="(min-width: 900px) 836px, 100vw" alt="" width="640" height="361" loading="lazy" /></button>
-            <button type="button" data-index="3" aria-label="Open photo: forested peaks"><img src="assets/photos/mountain-hero-640.webp" srcset="assets/photos/mountain-hero-640.webp 640w, assets/photos/mountain-hero-1212.webp 1212w" sizes="(min-width: 900px) 836px, 100vw" alt="" width="640" height="361" loading="lazy" /></button>
-          </div>
-        </section>
-        <section class="tour-group" id="tour-surrounds" aria-labelledby="tg-surrounds"><h3 id="tg-surrounds">Surrounds</h3>
-          <div class="tour-grid"><button type="button" data-index="4" aria-label="Open photo: green hillside"><img src="assets/photos/villa-day-640.webp" srcset="assets/photos/villa-day-640.webp 640w, assets/photos/villa-day-1000.webp 1000w" sizes="(min-width: 900px) 836px, 100vw" alt="" width="640" height="360" loading="lazy" /></button></div>
-        </section>
-      </div>
-    </dialog>
-    <dialog class="modal" id="amenities-dialog" aria-labelledby="amenities-dialog-title">
-      <div class="modal-head">
-        <button class="icon-btn" type="button" data-close aria-label="Close amenities"><svg class="icon" aria-hidden="true"><use href="#i-x" /></svg></button>
-      </div>
-      <div class="modal-body">
-        <h2 id="amenities-dialog-title">What this place offers</h2>
-        <!-- TODO(owner): Wi-Fi, parking, hot water, power backup, TV, kitchen access — add only what's true. -->
-        <h3>Room</h3>
-        <ul class="amenity-list amenity-list-full">
-          <li><svg class="icon" aria-hidden="true"><use href="#i-mountain" /></svg>Mountain-facing deluxe room</li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-sunrise" /></svg>Private balcony</li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-snowflake" /></svg><span>Air conditioning<small>Extra charge</small></span></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-bed" /></svg><span>Extra bed<small>₹1,000 a night, breakfast included</small></span></li>
-        </ul>
-        <h3>Food</h3>
-        <ul class="amenity-list amenity-list-full">
-          <li><svg class="icon" aria-hidden="true"><use href="#i-coffee" /></svg><span>South Indian breakfast for 2<small>Complimentary</small></span></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-utensils" /></svg><span>Lunch and dinner<small>As per menu, with 24 hours' notice</small></span></li>
-        </ul>
-        <h3>Outdoors and trips</h3>
-        <ul class="amenity-list amenity-list-full">
-          <li><svg class="icon" aria-hidden="true"><use href="#i-flame" /></svg><span>Campfire<small>₹500 an hour, wood arranged</small></span></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-speaker" /></svg><span>Bluetooth sound bar<small>Complimentary with the campfire</small></span></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-car" /></svg><span>Jeep safari and transport<small>Prevailing rates</small></span></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-compass" /></svg><span>Guided trekking<small>Prevailing rates</small></span></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-route" /></svg><span>Local sightseeing vehicles<small>Prevailing rates, advance notice</small></span></li>
-        </ul>
-        <h3>Service</h3>
-        <ul class="amenity-list amenity-list-full">
-          <li><svg class="icon" aria-hidden="true"><use href="#i-heart" /></svg>Dedicated 24/7 hospitality</li>
-        </ul>
-      </div>
-    </dialog>
+    </section>
+    <section class="tour-group" id="tour-surrounds" aria-labelledby="tg-surrounds"><h3 id="tg-surrounds">Surrounds</h3>
+      <div class="tour-grid"><button type="button" data-index="4" aria-label="Open photo: green hillside"><img src="assets/photos/villa-day-640.webp" srcset="assets/photos/villa-day-640.webp 640w, assets/photos/villa-day-1000.webp 1000w" sizes="(min-width: 900px) 836px, 100vw" alt="" width="640" height="360" loading="lazy" /></button></div>
+    </section>
+  </div>
+</dialog>
+<dialog class="modal" id="amenities-dialog" aria-labelledby="amenities-dialog-title">
+  <div class="modal-head">
+    <button class="icon-btn" type="button" data-close aria-label="Close amenities"><svg class="icon" aria-hidden="true"><use href="#i-x" /></svg></button>
+  </div>
+  <div class="modal-body">
+    <h2 id="amenities-dialog-title">What this place offers</h2>
+    <!-- TODO(owner): Wi-Fi, parking, hot water, power backup, TV, kitchen access — add only what's true. -->
+    <h3>Room</h3>
+    <ul class="amenity-list amenity-list-full">
+      <li><svg class="icon" aria-hidden="true"><use href="#i-mountain" /></svg>Mountain-facing deluxe room</li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-sunrise" /></svg>Private balcony</li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-snowflake" /></svg><span>Air conditioning<small>Extra charge</small></span></li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-bed" /></svg><span>Extra bed<small>₹1,000 a night, breakfast included</small></span></li>
+    </ul>
+    <h3>Food</h3>
+    <ul class="amenity-list amenity-list-full">
+      <li><svg class="icon" aria-hidden="true"><use href="#i-coffee" /></svg><span>South Indian breakfast for 2<small>Complimentary</small></span></li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-utensils" /></svg><span>Lunch and dinner<small>As per menu, with 24 hours' notice</small></span></li>
+    </ul>
+    <h3>Outdoors and trips</h3>
+    <ul class="amenity-list amenity-list-full">
+      <li><svg class="icon" aria-hidden="true"><use href="#i-flame" /></svg><span>Campfire<small>₹500 an hour, wood arranged</small></span></li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-speaker" /></svg><span>Bluetooth sound bar<small>Complimentary with the campfire</small></span></li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-car" /></svg><span>Jeep safari and transport<small>Prevailing rates</small></span></li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-compass" /></svg><span>Guided trekking<small>Prevailing rates</small></span></li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-route" /></svg><span>Local sightseeing vehicles<small>Prevailing rates, advance notice</small></span></li>
+    </ul>
+    <h3>Service</h3>
+    <ul class="amenity-list amenity-list-full">
+      <li><svg class="icon" aria-hidden="true"><use href="#i-heart" /></svg>Dedicated 24/7 hospitality</li>
+    </ul>
+  </div>
+</dialog>
 <!-- /@section:tour -->
 <!-- @section:viewer -->
 <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">

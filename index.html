@@ -599,7 +599,7 @@
       <button class="btn btn-primary" type="button" id="open-sheet" aria-controls="booking" aria-expanded="false">Check availability</button>
     </div>
 <!-- /@section:mobilebar -->
-<!-- @section:dialogs -->
+<!-- @section:tour -->
     <dialog class="photo-tour" id="photo-tour" aria-labelledby="tour-title">
       <div class="tour-head">
         <button class="icon-btn" type="button" data-close aria-label="Close photos"><svg class="icon" aria-hidden="true"><use href="#i-left" /></svg></button>
@@ -627,22 +627,6 @@
         </section>
       </div>
     </dialog>
-
-    <!-- Lightbox -->
-    <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
-      <div class="lb-head">
-        <button class="lb-btn" type="button" data-close aria-label="Close photo viewer"><svg class="icon" aria-hidden="true"><use href="#i-x" /></svg></button>
-        <span class="lb-counter" id="lb-counter" aria-live="polite"></span>
-      </div>
-      <figure class="lb-stage" id="lb-stage">
-        <img id="lb-img" src="" alt="" />
-        <figcaption id="lb-caption"></figcaption>
-      </figure>
-      <button class="lb-btn lb-prev" type="button" id="lb-prev" aria-label="Previous photo"><svg class="icon" aria-hidden="true"><use href="#i-left" /></svg></button>
-      <button class="lb-btn lb-next" type="button" id="lb-next" aria-label="Next photo"><svg class="icon" aria-hidden="true"><use href="#i-right" /></svg></button>
-    </dialog>
-
-    <!-- Amenities -->
     <dialog class="modal" id="amenities-dialog" aria-labelledby="amenities-dialog-title">
       <div class="modal-head">
         <button class="icon-btn" type="button" data-close aria-label="Close amenities"><svg class="icon" aria-hidden="true"><use href="#i-x" /></svg></button>
@@ -676,9 +660,22 @@
         </ul>
       </div>
     </dialog>
-
-    <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<!-- /@section:dialogs -->
+<!-- /@section:tour -->
+<!-- @section:viewer -->
+<dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+  <div class="lb-head">
+    <button class="lb-btn" type="button" data-close aria-label="Close photo viewer"><svg class="icon" aria-hidden="true"><use href="#i-x" /></svg></button>
+    <span class="lb-counter" id="lb-counter" aria-live="polite"></span>
+  </div>
+  <figure class="lb-stage" id="lb-stage">
+    <img id="lb-img" src="" alt="" />
+    <figcaption id="lb-caption"></figcaption>
+  </figure>
+  <button class="lb-btn lb-prev" type="button" id="lb-prev" aria-label="Previous photo"><svg class="icon" aria-hidden="true"><use href="#i-left" /></svg></button>
+  <button class="lb-btn lb-next" type="button" id="lb-next" aria-label="Next photo"><svg class="icon" aria-hidden="true"><use href="#i-right" /></svg></button>
+</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<!-- /@section:viewer -->
 
     <script src="script.js"></script>
   </body>

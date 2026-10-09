@@ -899,6 +899,137 @@ address { font-style: normal; }
 }
 /* /@section:gallery */
 
+/* @section:viewer */
+.lightbox {
+  width: 100vw;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: var(--black);
+  color: var(--white);
+}
+
+.lightbox[open] {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.lightbox::backdrop {
+  background: var(--scrim);
+}
+
+.lightbox .lb-head {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  padding: var(--sp-3) var(--gutter);
+}
+
+.lightbox .lb-counter {
+  font-size: var(--fs-small);
+  color: var(--muted-on-dark);
+}
+
+.lightbox .lb-stage {
+  margin: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-3);
+  padding: 0 var(--gutter) var(--sp-6);
+}
+
+.lightbox .lb-stage img {
+  max-width: 100%;
+  max-height: calc(100dvh - 160px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.lightbox #lb-img.is-loading {
+  opacity: 0.4;
+}
+
+.lightbox .lb-stage figcaption {
+  font-size: var(--fs-small);
+  color: var(--muted-on-dark);
+  text-align: center;
+}
+
+.lightbox .lb-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  background: var(--text);
+  color: var(--white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox .lb-btn:hover {
+  background: var(--muted);
+}
+
+.lightbox .lb-prev,
+.lightbox .lb-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox .lb-prev {
+  left: var(--gutter);
+}
+
+.lightbox .lb-next {
+  right: var(--gutter);
+}
+
+@media (min-width: 768px) {
+  .lightbox .lb-prev,
+  .lightbox .lb-next {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 767px) {
+  .lightbox .lb-prev,
+  .lightbox .lb-next {
+    display: none;
+  }
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: var(--sp-8);
+  transform: translateX(-50%) translateY(var(--sp-4));
+  background: var(--text);
+  color: var(--white);
+  font-size: var(--fs-small);
+  padding: var(--sp-2) var(--sp-4);
+  border-radius: 980px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 100;
+}
+
+.toast.is-visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+/* /@section:viewer */
+
 /* @end-sections */
 
 /* ---------- Motion ---------- */

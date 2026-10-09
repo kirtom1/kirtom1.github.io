@@ -483,6 +483,62 @@ address { font-style: normal; }
 }
 /* /@section:about */
 
+/* @section:experiences */
+.experiences .experience-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experiences .experience {
+  text-align: left;
+}
+
+.experiences .experience img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  margin-bottom: var(--sp-5);
+}
+
+.experiences .experience-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: var(--grey);
+  border-radius: var(--radius);
+  color: var(--blue);
+  margin-bottom: var(--sp-5);
+}
+
+.experiences .experience h3 {
+  font-size: var(--fs-tile);
+  font-weight: 600;
+  letter-spacing: var(--ls-tight);
+  line-height: 1.1;
+}
+
+.experiences .experience p {
+  margin-top: var(--sp-2);
+}
+
+.experiences .experience .experience-price {
+  margin-top: var(--sp-3);
+  font-size: var(--fs-small);
+  color: var(--muted);
+}
+
+@media (min-width: 768px) {
+  .experiences .experience-list {
+    gap: var(--sp-5);
+  }
+}
+/* /@section:experiences */
+
 /* @end-sections */
 
 /* ---------- Motion ---------- */

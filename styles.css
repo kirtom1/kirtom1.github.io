@@ -581,6 +581,82 @@ address { font-style: normal; }
 }
 /* /@section:host */
 
+/* @section:tariff */
+.tariff .price-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.tariff .price-table caption {
+  text-align: left;
+  font-size: var(--fs-tile);
+  font-weight: 600;
+  letter-spacing: var(--ls-tight);
+  margin-bottom: var(--sp-4);
+}
+
+.tariff .price-table thead {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.tariff .price-table tbody th,
+.tariff .price-table tbody td {
+  padding: var(--sp-3) 0;
+  vertical-align: top;
+}
+
+.tariff .price-table tbody tr + tr th,
+.tariff .price-table tbody tr + tr td {
+  border-top: 1px solid var(--white);
+}
+
+.tariff .price-table tbody th {
+  font-weight: 600;
+}
+
+.tariff .price-table tbody th span {
+  display: block;
+  font-weight: 400;
+  font-size: var(--fs-small);
+  color: var(--muted);
+  margin-top: var(--sp-1);
+}
+
+.tariff .price-table tbody td {
+  text-align: right;
+  white-space: nowrap;
+  padding-left: var(--sp-4);
+  font-weight: 600;
+}
+
+.tariff .tariff-offer {
+  text-align: center;
+  margin-top: var(--sp-7);
+}
+
+.tariff .tariff-offer .icon {
+  display: inline-block;
+  vertical-align: middle;
+  color: var(--blue);
+  margin-right: var(--sp-2);
+}
+
+.tariff .cta-row {
+  margin-top: var(--sp-5);
+}
+
+@media (min-width: 768px) {
+  .tariff .bento {
+    gap: var(--sp-5);
+  }
+}
+/* /@section:tariff */
+
 /* @end-sections */
 
 /* ---------- Motion ---------- */

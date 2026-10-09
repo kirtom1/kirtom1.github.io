@@ -325,60 +325,67 @@
 </section>
 <!-- /@section:host -->
 <!-- @section:tariff -->
-          <section class="block" id="tariff" aria-labelledby="tariff-title">
-            <h2 id="tariff-title">Tariff</h2>
-            <p class="section-intro muted">All prices in rupees, plus GST. <!-- TODO(owner): state the GST rate. --></p>
+<section class="tariff section section-white" id="tariff" aria-labelledby="tariff-title">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="headline" id="tariff-title">Tariff</h2>
+      <p class="subhead">All prices in rupees, plus GST. <!-- TODO(owner): state the GST rate. --></p>
+    </div>
 
-            <div class="table-wrap">
-              <table class="price-table">
-                <caption>Room</caption>
-                <thead><tr><th scope="col">Type</th><th scope="col">Per night</th></tr></thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">Deluxe room, mountain facing<span>Double occupancy (2 guests) · private balcony · complimentary South Indian breakfast for 2</span></th>
-                    <td>₹4,000</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+    <div class="bento">
+      <div class="tile price-tile span-2">
+        <table class="price-table">
+          <caption>Room</caption>
+          <thead><tr><th scope="col">Type</th><th scope="col">Per night</th></tr></thead>
+          <tbody>
+            <tr>
+              <th scope="row">Deluxe room, mountain facing<span>Double occupancy (2 guests) · private balcony · complimentary South Indian breakfast for 2</span></th>
+              <td>₹4,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-            <div class="table-wrap">
-              <table class="price-table">
-                <caption>Additional guests and children</caption>
-                <thead><tr><th scope="col">Guest</th><th scope="col">Per night</th></tr></thead>
-                <tbody>
-                  <!-- TODO(owner): confirm these are charged per night (the poster doesn't say). -->
-                  <tr><th scope="row">Extra guest, above 11 years<span>Extra bed and breakfast included</span></th><td>₹1,000</td></tr>
-                  <tr><th scope="row">Child, 5 to 11 years<span>Breakfast included · no extra bed</span></th><td>₹500</td></tr>
-                  <tr><th scope="row">Child, below 5 years<span>No extra bed</span></th><td>Free</td></tr>
-                </tbody>
-              </table>
-            </div>
+      <div class="tile price-tile">
+        <table class="price-table">
+          <caption>Additional guests and children</caption>
+          <thead><tr><th scope="col">Guest</th><th scope="col">Per night</th></tr></thead>
+          <tbody>
+            <!-- TODO(owner): confirm these are charged per night (the poster doesn't say). -->
+            <tr><th scope="row">Extra guest, above 11 years<span>Extra bed and breakfast included</span></th><td>₹1,000</td></tr>
+            <tr><th scope="row">Child, 5 to 11 years<span>Breakfast included · no extra bed</span></th><td>₹500</td></tr>
+            <tr><th scope="row">Child, below 5 years<span>No extra bed</span></th><td>Free</td></tr>
+          </tbody>
+        </table>
+      </div>
 
-            <div class="table-wrap">
-              <table class="price-table">
-                <caption>Meals, services and trips</caption>
-                <thead><tr><th scope="col">Service</th><th scope="col">Price</th></tr></thead>
-                <tbody>
-                  <tr><th scope="row">Campfire<span>Wood arranged · Bluetooth sound bar complimentary</span></th><td>₹500 / hour</td></tr>
-                  <tr><th scope="row">Lunch and dinner<span>Please give 24 hours' notice</span></th><td>As per menu</td></tr>
-                  <!-- TODO(owner): A/C charge per night. -->
-                  <tr><th scope="row">Air conditioning</th><td>Extra charge</td></tr>
-                  <tr><th scope="row">Jeep safari, trekking and transport</th><td>Prevailing rates</td></tr>
-                  <tr><th scope="row">Local sightseeing vehicles<span>Advance notice needed</span></th><td>Prevailing rates</td></tr>
-                </tbody>
-              </table>
-            </div>
+      <div class="tile price-tile">
+        <table class="price-table">
+          <caption>Meals, services and trips</caption>
+          <thead><tr><th scope="col">Service</th><th scope="col">Price</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Campfire<span>Wood arranged · Bluetooth sound bar complimentary</span></th><td>₹500 / hour</td></tr>
+            <tr><th scope="row">Lunch and dinner<span>Please give 24 hours' notice</span></th><td>As per menu</td></tr>
+            <!-- TODO(owner): A/C charge per night. -->
+            <tr><th scope="row">Air conditioning</th><td>Extra charge</td></tr>
+            <tr><th scope="row">Jeep safari, trekking and transport</th><td>Prevailing rates</td></tr>
+            <tr><th scope="row">Local sightseeing vehicles<span>Advance notice needed</span></th><td>Prevailing rates</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
-            <div class="offer">
-              <svg class="icon" aria-hidden="true"><use href="#i-tag" /></svg>
-              <p><strong>Seasonal and festival offers.</strong> Call or WhatsApp the hosts for an additional discount of up to 50%.</p>
-            </div>
-            <p class="downloads">
-              <a href="assets/tariff-poster.jpg" download><svg class="icon" aria-hidden="true"><use href="#i-download" /></svg>Tariff poster (JPG)</a>
-              <a href="blue-hills-view-tariff-poster.pdf" download><svg class="icon" aria-hidden="true"><use href="#i-download" /></svg>Tariff sheet (PDF)</a>
-            </p>
-          </section>
+    <p class="tariff-offer">
+      <svg class="icon" aria-hidden="true"><use href="#i-tag" /></svg>
+      <strong>Seasonal and festival offers.</strong> Call or WhatsApp the hosts for an additional discount of up to 50%.
+    </p>
+
+    <div class="cta-row">
+      <a class="link-arrow" href="assets/tariff-poster.jpg" download>Tariff poster (JPG)</a>
+      <a class="link-arrow" href="blue-hills-view-tariff-poster.pdf" download>Tariff sheet (PDF)</a>
+    </div>
+  </div>
+</section>
 <!-- /@section:tariff -->
 <!-- @section:booking -->
         <aside class="booking-col" aria-label="Booking enquiry">

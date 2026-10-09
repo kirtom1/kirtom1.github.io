@@ -307,4 +307,21 @@ document.addEventListener("click", (e) => {
 });
 window.matchMedia("(min-width: 768px)").addEventListener("change", (e) => { if (e.matches) closeMenu(); });
 
+/* ---------- Scroll reveal ---------- */
+// Added by script so the page reads fine without JS or with reduced motion.
+if (!reduceMotion.matches && "IntersectionObserver" in window) {
+  const revealer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-in");
+      revealer.unobserve(entry.target);
+    });
+  }, { rootMargin: "0px 0px -10% 0px" });
+  $$("main .section-head, main .tile:not(.booking), main .photo-full, .hero-text, .about-text, .review-list > li, .gallery-track").forEach((el) => {
+    if (el.getBoundingClientRect().top < innerHeight) return; // already on screen: leave it be
+    el.classList.add("reveal");
+    revealer.observe(el);
+  });
+}
+
 render();

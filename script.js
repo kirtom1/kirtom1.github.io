@@ -264,42 +264,64 @@ function requireDates(e) {
 $("#whatsapp-cta").addEventListener("click", requireDates);
 $("#email-cta").addEventListener("click", requireDates);
 
-/* ---------- Bottom sheet (below 960px) ---------- */
-const sheet = $("#booking");
-const backdrop = $("#booking-backdrop");
-const openSheetBtn = $("#open-sheet");
-const desktop = window.matchMedia("(min-width: 960px)");
+/* ---------- Booking band and mobile bar ---------- */
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const bookBand = $("#book");
 
-function setSheet(open) {
-  sheet.classList.toggle("is-open", open);
-  backdrop.hidden = !open;
-  document.body.classList.toggle("sheet-open", open);
-  openSheetBtn.setAttribute("aria-expanded", String(open));
-  if (open) {
-    sheet.setAttribute("role", "dialog");
-    sheet.setAttribute("aria-modal", "true");
-    // Wait for the slide-in so focus lands on a visible element.
-    requestAnimationFrame(() => (checkin.value ? $("#whatsapp-cta") : checkin).focus({ preventScroll: true }));
-  } else {
-    sheet.removeAttribute("role");
-    sheet.removeAttribute("aria-modal");
-  }
+// Every "Check availability" link lands on the card with check-in ready to fill.
+$$('a[href="#book"]').forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    closeMenu();
+    bookBand.scrollIntoView({ behavior: reduceMotion.matches ? "auto" : "smooth" });
+    (checkin.value ? $("#whatsapp-cta") : checkin).focus({ preventScroll: true });
+  });
+});
+
+// The bar steps aside while the booking card itself is on screen.
+const mobileBar = $("#mobile-bar");
+new IntersectionObserver(([entry]) => mobileBar.classList.toggle("is-hidden", entry.isIntersecting))
+  .observe(bookBand);
+
+/* ---------- Phone menu ---------- */
+const nav = $(".site-nav");
+const navToggle = $("#nav-toggle");
+
+function setMenu(open) {
+  nav.classList.toggle("is-open", open);
+  navToggle.setAttribute("aria-expanded", String(open));
 }
+function closeMenu() { setMenu(false); }
 
-openSheetBtn.addEventListener("click", () => setSheet(true));
-$("#close-sheet").addEventListener("click", () => { setSheet(false); openSheetBtn.focus(); });
-backdrop.addEventListener("click", () => setSheet(false));
+navToggle.addEventListener("click", () => {
+  const open = !nav.classList.contains("is-open");
+  setMenu(open);
+  if (open) $("#nav-menu a").focus();
+});
+$$("#nav-menu a").forEach((a) => a.addEventListener("click", closeMenu));
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && sheet.classList.contains("is-open")) { setSheet(false); openSheetBtn.focus(); }
+  if (e.key === "Escape" && nav.classList.contains("is-open")) { closeMenu(); navToggle.focus(); }
 });
-// Keep Tab inside the open sheet.
-sheet.addEventListener("keydown", (e) => {
-  if (e.key !== "Tab" || !sheet.classList.contains("is-open")) return;
-  const items = $$("button:not([disabled]), input, a[href]", sheet).filter((el) => el.offsetParent !== null);
-  const first = items[0], last = items[items.length - 1];
-  if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-  else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+document.addEventListener("click", (e) => {
+  if (nav.classList.contains("is-open") && !nav.contains(e.target)) closeMenu();
 });
-desktop.addEventListener("change", (e) => { if (e.matches) setSheet(false); });
+window.matchMedia("(min-width: 768px)").addEventListener("change", (e) => { if (e.matches) closeMenu(); });
+
+/* ---------- Scroll reveal ---------- */
+// Added by script so the page reads fine without JS or with reduced motion.
+if (!reduceMotion.matches && "IntersectionObserver" in window) {
+  const revealer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-in");
+      revealer.unobserve(entry.target);
+    });
+  }, { rootMargin: "0px 0px -10% 0px" });
+  $$("main .section-head, main .tile:not(.booking), main .photo-full, .hero-text, .about-text, .review-list > li, .gallery-track").forEach((el) => {
+    if (el.getBoundingClientRect().top < innerHeight) return; // already on screen: leave it be
+    el.classList.add("reveal");
+    revealer.observe(el);
+  });
+}
 
 render();

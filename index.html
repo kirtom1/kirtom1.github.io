@@ -7,7 +7,7 @@
     <meta name="description" content="Mountain-facing deluxe room from ₹4,000 a night with South Indian breakfast for two. A family-run serviced villa in Paloor, Attapady, Kerala, near Silent Valley National Park. Enquire on WhatsApp." />
     <!-- TODO(owner): switch to https://www.bluehillsview.com/ (named on the tariff poster) if that domain points at this site. -->
     <link rel="canonical" href="https://kirtom1.github.io/" />
-    <meta name="theme-color" content="#fdf8ee" />
+    <meta name="theme-color" content="#ffffff" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 
@@ -65,9 +65,6 @@
       }
     </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="preload" as="image" href="assets/photos/villa-evening-1000.webp" type="image/webp" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -110,525 +107,575 @@
 
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="#top" aria-label="Blue Hills View, back to top">
-          <img src="assets/blue-hills-logo.jpg" alt="Blue Hills View" width="520" height="263" />
-        </a>
-        <nav class="header-nav" aria-label="Sections">
-          <a href="#photos">Photos</a>
-          <a href="#amenities">Amenities</a>
-          <a href="#tariff">Tariff</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#location">Location</a>
-        </nav>
-        <a class="btn btn-outline btn-small" href="tel:+918089000159">
-          <svg class="icon" aria-hidden="true"><use href="#i-phone" /></svg><span>Call</span>
-        </a>
-      </div>
-    </header>
+<!-- @section:nav -->
+<header class="site-nav">
+  <div class="container nav-inner">
+    <a class="nav-brand" href="#top" aria-label="Blue Hills View, back to top"><img src="assets/blue-hills-logo.jpg" alt="Blue Hills View" width="520" height="263" /></a>
+    <nav class="nav-menu" id="nav-menu" aria-label="Sections">
+      <ul class="nav-links">
+        <li><a href="#photos">Photos</a></li>
+        <li><a href="#amenities">Amenities</a></li>
+        <li><a href="#tariff">Tariff</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="tel:+918089000159">Call</a></li>
+      </ul>
+    </nav>
+    <a class="nav-book" href="#book">Check availability</a>
+    <button class="nav-toggle" type="button" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu"><span class="nav-toggle-bars" aria-hidden="true"></span><span class="visually-hidden">Menu</span></button>
+  </div>
+</header>
+<!-- /@section:nav -->
 
     <main id="main">
-      <!-- 1. Title row -->
-      <section class="container title-row" id="top" aria-labelledby="villa-name">
-        <h1 id="villa-name">Blue Hills View</h1>
-        <p class="title-sub">Family-run serviced villa near Silent Valley National Park</p>
-        <div class="title-meta">
-          <!-- TODO(owner): add "N guests · N bedrooms · N beds · N baths" once known. Only poster facts shown below. -->
-          <p class="summary">Mountain-facing deluxe room · Double occupancy · Breakfast for 2 included</p>
-          <a class="title-location" href="#location"><svg class="icon" aria-hidden="true"><use href="#i-pin" /></svg>Paloor, Attapady, Kerala</a>
-        </div>
-        <div class="title-actions">
-          <button class="btn-text" type="button" id="share-btn"><svg class="icon" aria-hidden="true"><use href="#i-share" /></svg>Share</button>
-          <a class="btn-text" href="https://wa.me/918089000159" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-chat" /></svg>WhatsApp</a>
-        </div>
-      </section>
-
-      <!-- 2. Gallery -->
-      <section class="container gallery-section" id="photos" aria-label="Photos">
-        <div class="gallery">
-          <ul class="gallery-track" id="gallery-track">
-            <li>
-              <button class="gallery-item" type="button" data-index="0" aria-label="Open photo 1 of 5: the villa at night">
-                <picture>
-                  <source type="image/webp" srcset="assets/photos/villa-evening-640.webp 640w, assets/photos/villa-evening-1000.webp 1000w" sizes="(min-width: 744px) 50vw, 100vw" />
-                  <img src="assets/villa-evening.jpg" alt="The villa at night, its porch lit with festive lights and stars" width="1000" height="752" fetchpriority="high" />
-                </picture>
-              </button>
-            </li>
-            <li>
-              <button class="gallery-item" type="button" data-index="1" aria-label="Open photo 2 of 5: campfire">
-                <picture>
-                  <source type="image/webp" srcset="assets/photos/campfire-640.webp 640w, assets/photos/campfire-900.webp 900w" sizes="(min-width: 744px) 25vw, 100vw" />
-                  <img src="assets/campfire.jpg" alt="A campfire burning in front of the two-storey villa after dark" width="900" height="1196" loading="lazy" />
-                </picture>
-              </button>
-            </li>
-            <li>
-              <button class="gallery-item" type="button" data-index="2" aria-label="Open photo 3 of 5: the view">
-                <picture>
-                  <source type="image/webp" srcset="assets/photos/mountain-view-640.webp 640w, assets/photos/mountain-view-1100.webp 1100w" sizes="(min-width: 744px) 25vw, 100vw" />
-                  <img src="assets/mountain-view.jpg" alt="Clouds drifting over the Attapady hills above green slopes" width="1100" height="620" loading="lazy" />
-                </picture>
-              </button>
-            </li>
-            <li>
-              <button class="gallery-item" type="button" data-index="3" aria-label="Open photo 4 of 5: peaks">
-                <picture>
-                  <source type="image/webp" srcset="assets/photos/mountain-hero-640.webp 640w, assets/photos/mountain-hero-1212.webp 1212w" sizes="(min-width: 744px) 25vw, 100vw" />
-                  <img src="assets/mountain-hero.jpg" alt="Forested peaks above terraced fields under a clear blue sky" width="1212" height="683" loading="lazy" />
-                </picture>
-              </button>
-            </li>
-            <li>
-              <button class="gallery-item" type="button" data-index="4" aria-label="Open photo 5 of 5: green hillside">
-                <picture>
-                  <source type="image/webp" srcset="assets/photos/villa-day-640.webp 640w, assets/photos/villa-day-1000.webp 1000w" sizes="(min-width: 744px) 25vw, 100vw" />
-                  <img src="assets/villa-day.jpg" alt="A thickly wooded green hill with the valley beyond" width="1000" height="563" loading="lazy" />
-                </picture>
-              </button>
-            </li>
-          </ul>
-          <span class="gallery-counter" id="gallery-counter" aria-hidden="true">1 / 5</span>
-          <button class="btn btn-light gallery-all" type="button" id="show-all-photos">
-            <svg class="icon" aria-hidden="true"><use href="#i-grid" /></svg>Show all photos
-          </button>
-        </div>
-      </section>
-
-      <!-- 3. Two-column body -->
-      <div class="container listing">
-        <div class="listing-main">
-          <section class="block about" aria-labelledby="about-title">
-            <h2 id="about-title" class="visually-hidden">About this place</h2>
-            <ul class="highlights">
-              <li>
-                <svg class="icon icon-lg" aria-hidden="true"><use href="#i-mountain" /></svg>
-                <div><h3>Mountain-facing room with a private balcony</h3><p>Sunrise over lush green hills.</p></div>
-              </li>
-              <li>
-                <svg class="icon icon-lg" aria-hidden="true"><use href="#i-coffee" /></svg>
-                <div><h3>Breakfast is included</h3><p>Complimentary South Indian breakfast for two, every morning.</p></div>
-              </li>
-              <li>
-                <svg class="icon icon-lg" aria-hidden="true"><use href="#i-heart" /></svg>
-                <div><h3>Hosts on hand day and night</h3><p>Dedicated 24/7 hospitality from the family who run the villa.</p></div>
-              </li>
-            </ul>
-            <div class="about-copy">
-              <p class="lead">A private mountain retreat at the edge of Silent Valley. Come for the stillness, stay for the stories.</p>
-              <p>Tucked away in the highlands of Attapady, Blue Hills View is an intimate serviced villa designed for unhurried mornings, long-table dinners, and the rare luxury of doing absolutely nothing.</p>
-              <p>Everything you need. Nothing you don't.</p>
-            </div>
-          </section>
-
-          <section class="block host" aria-labelledby="host-title">
-            <div class="host-avatar" aria-hidden="true">T&amp;M</div>
-            <div>
-              <!-- TODO(owner): host photo, a two-line bio, languages spoken, and how long they've hosted. -->
-              <h2 id="host-title">Hosted by Tomy and Molly</h2>
-              <p class="muted">Guests know them as Uncle Tomy and Molly Aunty.</p>
-              <div class="host-actions">
-                <a class="btn btn-outline btn-small" href="https://wa.me/918089000159" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-chat" /></svg>Message on WhatsApp</a>
-                <a class="btn btn-outline btn-small" href="tel:+918089000159"><svg class="icon" aria-hidden="true"><use href="#i-phone" /></svg>+91 80890 00159</a>
-              </div>
-            </div>
-          </section>
-
-          <section class="block" id="amenities" aria-labelledby="amenities-title">
-            <h2 id="amenities-title">What this place offers</h2>
-            <ul class="amenity-list">
-              <li><svg class="icon" aria-hidden="true"><use href="#i-mountain" /></svg>Mountain-facing deluxe room</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-sunrise" /></svg>Private balcony</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-coffee" /></svg>South Indian breakfast for 2, included</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-utensils" /></svg>Lunch and dinner on request</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-flame" /></svg>Campfire with wood arranged</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-snowflake" /></svg>Air conditioning (extra charge)</li>
-            </ul>
-            <button class="btn btn-outline" type="button" data-open-dialog="amenities-dialog">Show all 12 amenities</button>
-          </section>
-
-          <section class="block" id="experiences" aria-labelledby="experiences-title">
-            <h2 id="experiences-title">Things to do</h2>
-            <p class="section-intro muted">Made for the in-between. The hosts arrange all of these; just ask when you book.</p>
-            <ul class="experience-list">
-              <li class="experience">
-                <img src="assets/photos/campfire-640.webp" alt="Campfire in front of the villa at night" width="640" height="850" loading="lazy" />
-                <div>
-                  <h3>Campfire nights</h3>
-                  <p>Open skies, warm fires, slow conversations.</p>
-                  <p class="experience-price">₹500 an hour · wood arranged, Bluetooth sound bar</p>
-                </div>
-              </li>
-              <li class="experience">
-                <img src="assets/photos/mountain-view-640.webp" alt="Clouds over the Attapady hills" width="640" height="361" loading="lazy" />
-                <div>
-                  <h3>Jeep safari and trekking</h3>
-                  <p>Big skies, green trails and quiet mornings in the highlands.</p>
-                  <p class="experience-price">Prevailing rates · transport can be arranged</p>
-                </div>
-              </li>
-              <li class="experience">
-                <img src="assets/photos/mountain-hero-640.webp" alt="Forested peaks above terraced fields" width="640" height="361" loading="lazy" />
-                <div>
-                  <h3>Local sightseeing</h3>
-                  <p>Vehicles for day trips around Attapady and towards Silent Valley.</p>
-                  <p class="experience-price">Prevailing rates · advance notice needed</p>
-                </div>
-              </li>
-              <li class="experience">
-                <!-- TODO(owner): a food photo would replace this icon tile. -->
-                <div class="experience-tile" aria-hidden="true"><svg class="icon"><use href="#i-utensils" /></svg></div>
-                <div>
-                  <h3>Kerala home cooking</h3>
-                  <p>Home-cooked, authentic delicacies. Breakfast is included; lunch and dinner are cooked to order.</p>
-                  <p class="experience-price">As per menu · 24 hours' notice</p>
-                </div>
-              </li>
-            </ul>
-          </section>
-
-          <section class="block" id="sleep" aria-labelledby="sleep-title">
-            <h2 id="sleep-title">Where you'll sleep</h2>
-            <!-- TODO(owner): room photo, number of rooms, bed type (e.g. 1 queen bed) and bathroom details. -->
-            <div class="sleep-card">
-              <svg class="icon icon-lg" aria-hidden="true"><use href="#i-bed" /></svg>
-              <h3>Deluxe room, mountain facing</h3>
-              <p class="muted">Spacious room for two with a private balcony. An extra bed can be added for a third guest.</p>
-            </div>
-          </section>
-
-          <!-- 5. Tariff -->
-          <section class="block" id="tariff" aria-labelledby="tariff-title">
-            <h2 id="tariff-title">Tariff</h2>
-            <p class="section-intro muted">All prices in rupees, plus GST. <!-- TODO(owner): state the GST rate. --></p>
-
-            <div class="table-wrap">
-              <table class="price-table">
-                <caption>Room</caption>
-                <thead><tr><th scope="col">Type</th><th scope="col">Per night</th></tr></thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">Deluxe room, mountain facing<span>Double occupancy (2 guests) · private balcony · complimentary South Indian breakfast for 2</span></th>
-                    <td>₹4,000</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div class="table-wrap">
-              <table class="price-table">
-                <caption>Additional guests and children</caption>
-                <thead><tr><th scope="col">Guest</th><th scope="col">Per night</th></tr></thead>
-                <tbody>
-                  <!-- TODO(owner): confirm these are charged per night (the poster doesn't say). -->
-                  <tr><th scope="row">Extra guest, above 11 years<span>Extra bed and breakfast included</span></th><td>₹1,000</td></tr>
-                  <tr><th scope="row">Child, 5 to 11 years<span>Breakfast included · no extra bed</span></th><td>₹500</td></tr>
-                  <tr><th scope="row">Child, below 5 years<span>No extra bed</span></th><td>Free</td></tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div class="table-wrap">
-              <table class="price-table">
-                <caption>Meals, services and trips</caption>
-                <thead><tr><th scope="col">Service</th><th scope="col">Price</th></tr></thead>
-                <tbody>
-                  <tr><th scope="row">Campfire<span>Wood arranged · Bluetooth sound bar complimentary</span></th><td>₹500 / hour</td></tr>
-                  <tr><th scope="row">Lunch and dinner<span>Please give 24 hours' notice</span></th><td>As per menu</td></tr>
-                  <!-- TODO(owner): A/C charge per night. -->
-                  <tr><th scope="row">Air conditioning</th><td>Extra charge</td></tr>
-                  <tr><th scope="row">Jeep safari, trekking and transport</th><td>Prevailing rates</td></tr>
-                  <tr><th scope="row">Local sightseeing vehicles<span>Advance notice needed</span></th><td>Prevailing rates</td></tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div class="offer">
-              <svg class="icon" aria-hidden="true"><use href="#i-tag" /></svg>
-              <p><strong>Seasonal and festival offers.</strong> Call or WhatsApp the hosts for an additional discount of up to 50%.</p>
-            </div>
-            <p class="downloads">
-              <a href="assets/tariff-poster.jpg" download><svg class="icon" aria-hidden="true"><use href="#i-download" /></svg>Tariff poster (JPG)</a>
-              <a href="blue-hills-view-tariff-poster.pdf" download><svg class="icon" aria-hidden="true"><use href="#i-download" /></svg>Tariff sheet (PDF)</a>
-            </p>
-          </section>
-        </div>
-
-        <!-- 4. Booking card (bottom sheet on small screens) -->
-        <aside class="booking-col" aria-label="Booking enquiry">
-          <div class="booking-backdrop" id="booking-backdrop" hidden></div>
-          <div class="booking" id="booking" aria-labelledby="booking-title">
-            <div class="sheet-head">
-              <h2 id="booking-title" class="sheet-title">Check availability</h2>
-              <button class="icon-btn" type="button" id="close-sheet" aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-x" /></svg></button>
-            </div>
-            <p class="booking-price"><strong>₹4,000</strong> <span>night</span><span class="booking-price-note">plus GST · breakfast for 2</span></p>
-            <form class="booking-form" id="booking-form" novalidate>
-              <div class="date-fields">
-                <label class="field">
-                  <span class="field-label">Check-in</span>
-                  <input type="date" id="checkin" name="checkin" required />
-                </label>
-                <label class="field">
-                  <span class="field-label">Check-out</span>
-                  <input type="date" id="checkout" name="checkout" required />
-                </label>
-              </div>
-              <div class="guests">
-                <button class="field guests-toggle" type="button" id="guests-toggle" aria-expanded="false" aria-controls="guests-panel">
-                  <span class="field-label">Guests</span>
-                  <span id="guests-summary">2 adults</span>
-                  <svg class="icon chevron" aria-hidden="true"><use href="#i-down" /></svg>
-                </button>
-                <div class="guests-panel" id="guests-panel" hidden>
-                  <div class="stepper" data-key="adults" data-min="1" data-max="10">
-                    <div><span class="stepper-label" id="adults-label">Adults</span><span class="stepper-hint">Ages 12 and up</span></div>
-                    <div class="stepper-controls">
-                      <button type="button" data-step="-1" aria-label="Remove an adult"><svg class="icon" aria-hidden="true"><use href="#i-minus" /></svg></button>
-                      <output aria-labelledby="adults-label" aria-live="polite">2</output>
-                      <button type="button" data-step="1" aria-label="Add an adult"><svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></button>
-                    </div>
-                  </div>
-                  <div class="stepper" data-key="children" data-min="0" data-max="6">
-                    <div><span class="stepper-label" id="children-label">Children</span><span class="stepper-hint">Ages 5 to 11</span></div>
-                    <div class="stepper-controls">
-                      <button type="button" data-step="-1" aria-label="Remove a child aged 5 to 11"><svg class="icon" aria-hidden="true"><use href="#i-minus" /></svg></button>
-                      <output aria-labelledby="children-label" aria-live="polite">0</output>
-                      <button type="button" data-step="1" aria-label="Add a child aged 5 to 11"><svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></button>
-                    </div>
-                  </div>
-                  <div class="stepper" data-key="infants" data-min="0" data-max="6">
-                    <div><span class="stepper-label" id="infants-label">Little ones</span><span class="stepper-hint">Under 5, stay free</span></div>
-                    <div class="stepper-controls">
-                      <button type="button" data-step="-1" aria-label="Remove a child under 5"><svg class="icon" aria-hidden="true"><use href="#i-minus" /></svg></button>
-                      <output aria-labelledby="infants-label" aria-live="polite">0</output>
-                      <button type="button" data-step="1" aria-label="Add a child under 5"><svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></button>
-                    </div>
-                  </div>
-                  <p class="stepper-note">The room rate covers two guests. Guests above 11 need an extra bed.</p>
-                </div>
-              </div>
-
-              <p class="form-error" id="booking-error" role="alert"></p>
-
-              <a class="btn btn-primary btn-block" id="whatsapp-cta" href="https://wa.me/918089000159" target="_blank" rel="noopener">
-                <svg class="icon" aria-hidden="true"><use href="#i-chat" /></svg>Check availability
-              </a>
-              <p class="cta-note">Opens WhatsApp with your dates filled in. The hosts confirm by hand. Nothing is charged here.</p>
-
-              <div class="estimate" id="estimate" aria-live="polite">
-                <p class="estimate-empty" id="estimate-empty">Add your dates to see an estimate.</p>
-                <dl class="estimate-lines" id="estimate-lines"></dl>
-                <p class="estimate-total" id="estimate-total" hidden></p>
-              </div>
-
-              <a class="btn-link" id="email-cta" href="mailto:booking@bluehillsview.com?subject=Booking%20enquiry"><svg class="icon" aria-hidden="true"><use href="#i-mail" /></svg>Or send the enquiry by email</a>
-            </form>
-          </div>
-        </aside>
-      </div>
-
-      <!-- 6. Reviews -->
-      <section class="container block wide" id="reviews" aria-labelledby="reviews-title">
-        <h2 id="reviews-title">What guests say</h2>
-        <!-- TODO(owner): name where these notes came from (Google, Airbnb, guest book…). Add a rating and count only from a real source. -->
-        <p class="section-intro muted">Notes guests have shared with the hosts.</p>
-        <ul class="review-list">
-          <li class="review">
-            <div class="review-head"><span class="avatar" aria-hidden="true">B</span><div><strong>A guest from Bengaluru</strong></div></div>
-            <blockquote>“Uncle Tomy and Molly Aunty made us feel like family.”</blockquote>
-          </li>
-          <li class="review">
-            <div class="review-head"><span class="avatar" aria-hidden="true">K</span><div><strong>A guest from Kochi</strong></div></div>
-            <blockquote>“The green coconut water welcome is unforgettable.”</blockquote>
-          </li>
-          <li class="review">
-            <div class="review-head"><span class="avatar" aria-hidden="true">M</span><div><strong>A guest from Mumbai</strong></div></div>
-            <blockquote>“The kind of quiet you carry home with you.”</blockquote>
-          </li>
-        </ul>
-      </section>
-
-      <!-- 7. Location -->
-      <section class="container block wide" id="location" aria-labelledby="location-title">
-        <h2 id="location-title">Where you'll be</h2>
-        <p class="location-address">Paloor, Attapady, Palakkad, Kerala 678582, India</p>
-        <div class="map">
-          <iframe
-            title="Map showing Blue Hills View in Paloor, Attapady"
-            src="https://www.google.com/maps?q=11.13325,76.5931667&amp;z=12&amp;output=embed"
-            width="1200" height="480" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div class="location-grid">
-          <div>
-            <h3>Getting there</h3>
-            <!-- TODO(owner): route from the nearest railway station and airport, road condition for the last stretch, and parking. -->
-            <p>Paloor is in Attapady, in the hills of Palakkad district, near Silent Valley National Park. Send the hosts your route on WhatsApp and they will guide you in; transport can be arranged at prevailing rates.</p>
-            <p class="link-row">
-              <a class="btn btn-outline btn-small" href="https://www.google.com/maps/dir/?api=1&amp;destination=11.13325,76.5931667" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-route" /></svg>Get directions</a>
-              <a class="btn-link" href="https://maps.google.com/?q=11.13325,76.5931667" target="_blank" rel="noopener">Open in Google Maps</a>
-            </p>
-          </div>
-          <div>
-            <h3>Nearby</h3>
-            <!-- TODO(owner): add distances, e.g. Silent Valley (Mukkali), Agali, Mannarkkad, Palakkad Junction, Coimbatore airport. -->
-            <ul class="nearby">
-              <li><svg class="icon" aria-hidden="true"><use href="#i-mountain" /></svg>Silent Valley National Park</li>
-            </ul>
-            <p class="coords muted">11°07'59.7"N 76°35'35.4"E</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- 8. Things to know -->
-      <section class="container block wide" id="know" aria-labelledby="know-title">
-        <h2 id="know-title">Things to know</h2>
-        <div class="know-grid">
-          <div>
-            <h3><svg class="icon" aria-hidden="true"><use href="#i-house" /></svg>House rules</h3>
-            <!-- TODO(owner): check-in/check-out times, smoking, pets, quiet hours, visitors. -->
-            <ul>
-              <li>Check-in and check-out times are confirmed by the hosts</li>
-              <li>Lunch and dinner need 24 hours' notice</li>
-              <li>Guests above 11 need an extra bed</li>
-            </ul>
-          </div>
-          <div>
-            <h3><svg class="icon" aria-hidden="true"><use href="#i-calendar" /></svg>Booking</h3>
-            <ul>
-              <li>Enquiries are confirmed by the hosts on WhatsApp or by phone</li>
-              <li>No payment is taken on this website</li>
-              <li>Prices are plus GST</li>
-            </ul>
-          </div>
-          <div>
-            <h3><svg class="icon" aria-hidden="true"><use href="#i-info" /></svg>Cancellation</h3>
-            <!-- TODO(owner): cancellation and refund terms. -->
-            <ul>
-              <li>Ask the hosts for cancellation terms before you confirm</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- 9. Footer -->
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div>
-            <img class="footer-logo" src="assets/blue-hills-logo.jpg" alt="Blue Hills View, Enjoy the Beauty of Nature" width="520" height="263" loading="lazy" />
-            <p class="muted">A serviced villa for the wild at heart.</p>
-          </div>
-          <div>
-            <h2>Contact</h2>
-            <ul>
-              <li><a href="https://wa.me/918089000159" target="_blank" rel="noopener">WhatsApp +91 80890 00159</a></li>
-              <li><a href="tel:+918089000159">Call +91 80890 00159</a></li>
-              <li><a href="tel:+918086200159">Alternate +91 80862 00159</a></li>
-              <li><a href="mailto:booking@bluehillsview.com">booking@bluehillsview.com</a></li>
-            </ul>
-          </div>
-          <div>
-            <h2>Find us</h2>
-            <address>Paloor, Attapady<br />Palakkad, Kerala 678582<br />India</address>
-            <ul>
-              <li><a href="https://maps.google.com/?q=11.13325,76.5931667" target="_blank" rel="noopener">Google Maps</a></li>
-              <!-- TODO(owner): confirm this is the right Instagram account (handle from the tariff poster). -->
-              <li><a href="https://www.instagram.com/bluehillsview/" target="_blank" rel="noopener">Instagram @bluehillsview</a></li>
-            </ul>
-          </div>
-        </div>
-        <p class="footer-bottom">© <span id="year">2026</span> Blue Hills View · Made for the slow days.</p>
-      </div>
-    </footer>
-
-    <!-- Mobile booking bar -->
-    <div class="mobile-bar">
-      <p><strong id="bar-price">₹4,000</strong> <span id="bar-unit">night</span><span class="bar-sub" id="bar-sub">plus GST · breakfast for 2</span></p>
-      <button class="btn btn-primary" type="button" id="open-sheet" aria-controls="booking" aria-expanded="false">Check availability</button>
+<!-- @section:hero -->
+<section class="hero section section-white" id="top" aria-labelledby="villa-name">
+  <div class="container hero-text">
+    <h1 id="villa-name">Blue Hills View</h1>
+    <p class="subhead">Family-run serviced villa near Silent Valley National Park</p>
+    <!-- TODO(owner): add "N guests · N bedrooms · N beds · N baths" once known. Only poster facts shown below. -->
+    <p class="hero-meta">Mountain-facing deluxe room · Double occupancy · Breakfast for 2 included</p>
+    <div class="cta-row">
+      <a class="btn" href="#book">Check availability</a>
+      <a class="link-arrow" href="#location">Paloor, Attapady, Kerala</a>
     </div>
-
-    <!-- All photos -->
-    <dialog class="photo-tour" id="photo-tour" aria-labelledby="tour-title">
-      <div class="tour-head">
-        <button class="icon-btn" type="button" data-close aria-label="Close photos"><svg class="icon" aria-hidden="true"><use href="#i-left" /></svg></button>
-        <h2 id="tour-title">All photos</h2>
-      </div>
-      <div class="tour-body">
-        <nav class="tour-nav" aria-label="Photo groups">
-          <a href="#tour-villa">The villa</a><a href="#tour-campfire">Campfire</a><a href="#tour-views">Views</a><a href="#tour-surrounds">Surrounds</a>
-        </nav>
-        <!-- TODO(owner): add "Rooms" and "Food" groups once photos exist. -->
-        <section class="tour-group" id="tour-villa" aria-labelledby="tg-villa"><h3 id="tg-villa">The villa</h3>
-          <div class="tour-grid"><button type="button" data-index="0" aria-label="Open photo: the villa at night"><img src="assets/photos/villa-evening-640.webp" srcset="assets/photos/villa-evening-640.webp 640w, assets/photos/villa-evening-1000.webp 1000w" sizes="(min-width: 900px) 836px, 100vw" alt="" width="640" height="481" loading="lazy" /></button></div>
-        </section>
-        <section class="tour-group" id="tour-campfire" aria-labelledby="tg-campfire"><h3 id="tg-campfire">Campfire</h3>
-          <div class="tour-grid"><button type="button" data-index="1" aria-label="Open photo: campfire in front of the villa"><img src="assets/photos/campfire-640.webp" srcset="assets/photos/campfire-640.webp 640w, assets/photos/campfire-900.webp 900w" sizes="(min-width: 900px) 836px, 100vw" alt="" width="640" height="850" loading="lazy" /></button></div>
-        </section>
-        <section class="tour-group" id="tour-views" aria-labelledby="tg-views"><h3 id="tg-views">Views</h3>
-          <div class="tour-grid">
-            <button type="button" data-index="2" aria-label="Open photo: clouds over the hills"><img src="assets/photos/mountain-view-640.webp" srcset="assets/photos/mountain-view-640.webp 640w, assets/photos/mountain-view-1100.webp 1100w" sizes="(min-width: 900px) 836px, 100vw" alt="" width="640" height="361" loading="lazy" /></button>
-            <button type="button" data-index="3" aria-label="Open photo: forested peaks"><img src="assets/photos/mountain-hero-640.webp" srcset="assets/photos/mountain-hero-640.webp 640w, assets/photos/mountain-hero-1212.webp 1212w" sizes="(min-width: 900px) 836px, 100vw" alt="" width="640" height="361" loading="lazy" /></button>
-          </div>
-        </section>
-        <section class="tour-group" id="tour-surrounds" aria-labelledby="tg-surrounds"><h3 id="tg-surrounds">Surrounds</h3>
-          <div class="tour-grid"><button type="button" data-index="4" aria-label="Open photo: green hillside"><img src="assets/photos/villa-day-640.webp" srcset="assets/photos/villa-day-640.webp 640w, assets/photos/villa-day-1000.webp 1000w" sizes="(min-width: 900px) 836px, 100vw" alt="" width="640" height="360" loading="lazy" /></button></div>
-        </section>
-      </div>
-    </dialog>
-
-    <!-- Lightbox -->
-    <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
-      <div class="lb-head">
-        <button class="lb-btn" type="button" data-close aria-label="Close photo viewer"><svg class="icon" aria-hidden="true"><use href="#i-x" /></svg></button>
-        <span class="lb-counter" id="lb-counter" aria-live="polite"></span>
-      </div>
-      <figure class="lb-stage" id="lb-stage">
-        <img id="lb-img" src="" alt="" />
-        <figcaption id="lb-caption"></figcaption>
-      </figure>
-      <button class="lb-btn lb-prev" type="button" id="lb-prev" aria-label="Previous photo"><svg class="icon" aria-hidden="true"><use href="#i-left" /></svg></button>
-      <button class="lb-btn lb-next" type="button" id="lb-next" aria-label="Next photo"><svg class="icon" aria-hidden="true"><use href="#i-right" /></svg></button>
-    </dialog>
-
-    <!-- Amenities -->
-    <dialog class="modal" id="amenities-dialog" aria-labelledby="amenities-dialog-title">
-      <div class="modal-head">
-        <button class="icon-btn" type="button" data-close aria-label="Close amenities"><svg class="icon" aria-hidden="true"><use href="#i-x" /></svg></button>
-      </div>
-      <div class="modal-body">
-        <h2 id="amenities-dialog-title">What this place offers</h2>
-        <!-- TODO(owner): Wi-Fi, parking, hot water, power backup, TV, kitchen access — add only what's true. -->
-        <h3>Room</h3>
-        <ul class="amenity-list amenity-list-full">
+    <div class="hero-actions">
+      <button class="hero-action" type="button" id="share-btn"><svg class="icon" aria-hidden="true"><use href="#i-share" /></svg>Share</button>
+      <a class="hero-action" href="https://wa.me/918089000159" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-chat" /></svg>WhatsApp</a>
+    </div>
+  </div>
+  <picture>
+    <source type="image/webp" srcset="assets/photos/villa-evening-640.webp 640w, assets/photos/villa-evening-1000.webp 1000w" sizes="100vw" />
+    <img class="photo-full hero-photo" src="assets/villa-evening.jpg" alt="The villa at night, its porch lit with festive lights and stars" width="1000" height="752" fetchpriority="high" />
+  </picture>
+</section>
+<!-- /@section:hero -->
+<!-- @section:about -->
+<section class="about section section-dark" aria-labelledby="about-title">
+  <div class="container about-text">
+    <h2 class="headline" id="about-title">A private mountain retreat at the edge of Silent Valley.</h2>
+    <p class="subhead">Come for the stillness, stay for the stories.</p>
+    <p class="about-copy">Tucked away in the highlands of Attapady, Blue Hills View is an intimate serviced villa designed for unhurried mornings, long-table dinners, and the rare luxury of doing absolutely nothing.</p>
+    <div class="cta-row"><a class="btn" href="#book">Check availability</a></div>
+  </div>
+  <picture>
+    <source type="image/webp" srcset="assets/photos/mountain-hero-640.webp 640w, assets/photos/mountain-hero-1212.webp 1212w" sizes="100vw" />
+    <img class="photo-full about-photo" src="assets/mountain-hero.jpg" alt="Forested peaks above terraced fields under a clear blue sky" width="1212" height="683" loading="lazy" />
+  </picture>
+</section>
+<!-- /@section:about -->
+<!-- @section:highlights -->
+<section class="highlights section section-grey" id="amenities" aria-labelledby="amenities-title">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="headline" id="amenities-title">What this place offers</h2>
+      <p class="subhead">Everything you need. Nothing you don't.</p>
+    </div>
+    <div class="bento">
+      <article class="tile span-2 highlight-view">
+        <h3>Mountain-facing room with a private balcony</h3>
+        <p>Sunrise over lush green hills.</p>
+        <picture>
+          <source type="image/webp" srcset="assets/photos/mountain-view-640.webp 640w, assets/photos/mountain-view-1100.webp 1100w" sizes="(min-width: 768px) 940px, 100vw" />
+          <img src="assets/mountain-view.jpg" alt="Clouds drifting over the Attapady hills above green slopes" width="1100" height="620" loading="lazy" />
+        </picture>
+      </article>
+      <article class="tile">
+        <svg class="icon icon-lg" aria-hidden="true"><use href="#i-coffee" /></svg>
+        <h3>Breakfast is included</h3>
+        <p>Complimentary South Indian breakfast for two, every morning.</p>
+      </article>
+      <article class="tile">
+        <svg class="icon icon-lg" aria-hidden="true"><use href="#i-heart" /></svg>
+        <h3>Hosts on hand day and night</h3>
+        <p>Dedicated 24/7 hospitality from the family who run the villa.</p>
+      </article>
+      <article class="tile span-2 amenity-tile">
+        <ul class="amenity-list">
           <li><svg class="icon" aria-hidden="true"><use href="#i-mountain" /></svg>Mountain-facing deluxe room</li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-sunrise" /></svg>Private balcony</li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-snowflake" /></svg><span>Air conditioning<small>Extra charge</small></span></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-bed" /></svg><span>Extra bed<small>₹1,000 a night, breakfast included</small></span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-coffee" /></svg>South Indian breakfast for 2, included</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-utensils" /></svg>Lunch and dinner on request</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-flame" /></svg>Campfire with wood arranged</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-snowflake" /></svg>Air conditioning (extra charge)</li>
         </ul>
-        <h3>Food</h3>
-        <ul class="amenity-list amenity-list-full">
-          <li><svg class="icon" aria-hidden="true"><use href="#i-coffee" /></svg><span>South Indian breakfast for 2<small>Complimentary</small></span></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-utensils" /></svg><span>Lunch and dinner<small>As per menu, with 24 hours' notice</small></span></li>
+        <button class="btn" type="button" data-open-dialog="amenities-dialog">Show all 12 amenities</button>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- /@section:highlights -->
+<!-- @section:gallery -->
+<section class="gallery section section-white" id="photos" aria-label="Photos">
+  <div class="container">
+    <ul class="gallery-track" id="gallery-track">
+      <li>
+        <button class="gallery-item" type="button" data-index="0" aria-label="Open photo 1 of 5: the villa at night">
+          <picture>
+            <source type="image/webp" srcset="assets/photos/villa-evening-640.webp 640w, assets/photos/villa-evening-1000.webp 1000w" sizes="(min-width: 768px) 490px, 100vw" />
+            <img src="assets/villa-evening.jpg" alt="The villa at night, its porch lit with festive lights and stars" width="1000" height="752" fetchpriority="high" />
+          </picture>
+        </button>
+      </li>
+      <li>
+        <button class="gallery-item" type="button" data-index="1" aria-label="Open photo 2 of 5: campfire">
+          <picture>
+            <source type="image/webp" srcset="assets/photos/campfire-640.webp 640w, assets/photos/campfire-900.webp 900w" sizes="(min-width: 768px) 245px, 100vw" />
+            <img src="assets/campfire.jpg" alt="A campfire burning in front of the two-storey villa after dark" width="900" height="1196" loading="lazy" />
+          </picture>
+        </button>
+      </li>
+      <li>
+        <button class="gallery-item" type="button" data-index="2" aria-label="Open photo 3 of 5: the view">
+          <picture>
+            <source type="image/webp" srcset="assets/photos/mountain-view-640.webp 640w, assets/photos/mountain-view-1100.webp 1100w" sizes="(min-width: 768px) 245px, 100vw" />
+            <img src="assets/mountain-view.jpg" alt="Clouds drifting over the Attapady hills above green slopes" width="1100" height="620" loading="lazy" />
+          </picture>
+        </button>
+      </li>
+      <li>
+        <button class="gallery-item" type="button" data-index="3" aria-label="Open photo 4 of 5: peaks">
+          <picture>
+            <source type="image/webp" srcset="assets/photos/mountain-hero-640.webp 640w, assets/photos/mountain-hero-1212.webp 1212w" sizes="(min-width: 768px) 245px, 100vw" />
+            <img src="assets/mountain-hero.jpg" alt="Forested peaks above terraced fields under a clear blue sky" width="1212" height="683" loading="lazy" />
+          </picture>
+        </button>
+      </li>
+      <li>
+        <button class="gallery-item" type="button" data-index="4" aria-label="Open photo 5 of 5: green hillside">
+          <picture>
+            <source type="image/webp" srcset="assets/photos/villa-day-640.webp 640w, assets/photos/villa-day-1000.webp 1000w" sizes="(min-width: 768px) 245px, 100vw" />
+            <img src="assets/villa-day.jpg" alt="A thickly wooded green hill with the valley beyond" width="1000" height="563" loading="lazy" />
+          </picture>
+        </button>
+      </li>
+    </ul>
+    <p class="gallery-counter" id="gallery-counter" aria-hidden="true">1 / 5</p>
+    <div class="cta-row">
+      <button class="btn" type="button" id="show-all-photos">
+        <svg class="icon" aria-hidden="true"><use href="#i-grid" /></svg>Show all photos
+      </button>
+    </div>
+  </div>
+</section>
+<!-- /@section:gallery -->
+<!-- @section:experiences -->
+<section class="experiences section section-grey" id="experiences" aria-labelledby="experiences-title">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="headline" id="experiences-title">Things to do</h2>
+      <p class="subhead">Made for the in-between. The hosts arrange all of these; just ask when you book.</p>
+    </div>
+    <ul class="bento experience-list">
+      <li class="tile experience">
+        <img src="assets/photos/campfire-640.webp" alt="Campfire in front of the villa at night" width="640" height="850" loading="lazy" />
+        <h3>Campfire nights</h3>
+        <p>Open skies, warm fires, slow conversations.</p>
+        <p class="experience-price">₹500 an hour · wood arranged, Bluetooth sound bar</p>
+      </li>
+      <li class="tile experience">
+        <img src="assets/photos/mountain-view-640.webp" alt="Clouds over the Attapady hills" width="640" height="361" loading="lazy" />
+        <h3>Jeep safari and trekking</h3>
+        <p>Big skies, green trails and quiet mornings in the highlands.</p>
+        <p class="experience-price">Prevailing rates · transport can be arranged</p>
+      </li>
+      <li class="tile experience">
+        <img src="assets/photos/mountain-hero-640.webp" alt="Forested peaks above terraced fields" width="640" height="361" loading="lazy" />
+        <h3>Local sightseeing</h3>
+        <p>Vehicles for day trips around Attapady and towards Silent Valley.</p>
+        <p class="experience-price">Prevailing rates · advance notice needed</p>
+      </li>
+      <li class="tile experience">
+        <!-- TODO(owner): a food photo would replace this icon tile. -->
+        <div class="experience-icon" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-utensils" /></svg></div>
+        <h3>Kerala home cooking</h3>
+        <p>Home-cooked, authentic delicacies. Breakfast is included; lunch and dinner are cooked to order.</p>
+        <p class="experience-price">As per menu · 24 hours' notice</p>
+      </li>
+    </ul>
+  </div>
+</section>
+<!-- /@section:experiences -->
+<!-- @section:sleep -->
+<section class="sleep section section-white" id="sleep" aria-labelledby="sleep-title">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="headline" id="sleep-title">Where you'll sleep</h2>
+      <p class="subhead">Spacious room for two with a private balcony. An extra bed can be added for a third guest.</p>
+    </div>
+    <!-- TODO(owner): room photo, number of rooms, bed type (e.g. 1 queen bed) and bathroom details. -->
+    <div class="tile sleep-card">
+      <svg class="icon icon-lg" aria-hidden="true"><use href="#i-bed" /></svg>
+      <h3>Deluxe room, mountain facing</h3>
+      <div class="cta-row"><a class="link-arrow" href="#tariff">See the tariff</a></div>
+    </div>
+  </div>
+</section>
+<!-- /@section:sleep -->
+<!-- @section:host -->
+<section class="host section section-grey" aria-labelledby="host-title">
+  <div class="container">
+    <div class="host-avatar" aria-hidden="true">T&amp;M</div>
+    <!-- TODO(owner): host photo, a two-line bio, languages spoken, and how long they've hosted. -->
+    <h2 class="headline" id="host-title">Hosted by Tomy and Molly</h2>
+    <p class="subhead">Guests know them as Uncle Tomy and Molly Aunty.</p>
+    <div class="cta-row">
+      <a class="btn" href="https://wa.me/918089000159" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-chat" /></svg>Message on WhatsApp</a>
+      <a class="link-arrow" href="tel:+918089000159">+91 80890 00159</a>
+    </div>
+  </div>
+</section>
+<!-- /@section:host -->
+<!-- @section:tariff -->
+<section class="tariff section section-white" id="tariff" aria-labelledby="tariff-title">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="headline" id="tariff-title">Tariff</h2>
+      <p class="subhead">All prices in rupees, plus GST. <!-- TODO(owner): state the GST rate. --></p>
+    </div>
+
+    <div class="bento">
+      <div class="tile price-tile span-2">
+        <table class="price-table">
+          <caption>Room</caption>
+          <thead><tr><th scope="col">Type</th><th scope="col">Per night</th></tr></thead>
+          <tbody>
+            <tr>
+              <th scope="row">Deluxe room, mountain facing<span>Double occupancy (2 guests) · private balcony · complimentary South Indian breakfast for 2</span></th>
+              <td>₹4,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tile price-tile">
+        <table class="price-table">
+          <caption>Additional guests and children</caption>
+          <thead><tr><th scope="col">Guest</th><th scope="col">Per night</th></tr></thead>
+          <tbody>
+            <!-- TODO(owner): confirm these are charged per night (the poster doesn't say). -->
+            <tr><th scope="row">Extra guest, above 11 years<span>Extra bed and breakfast included</span></th><td>₹1,000</td></tr>
+            <tr><th scope="row">Child, 5 to 11 years<span>Breakfast included · no extra bed</span></th><td>₹500</td></tr>
+            <tr><th scope="row">Child, below 5 years<span>No extra bed</span></th><td>Free</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tile price-tile">
+        <table class="price-table">
+          <caption>Meals, services and trips</caption>
+          <thead><tr><th scope="col">Service</th><th scope="col">Price</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Campfire<span>Wood arranged · Bluetooth sound bar complimentary</span></th><td>₹500 / hour</td></tr>
+            <tr><th scope="row">Lunch and dinner<span>Please give 24 hours' notice</span></th><td>As per menu</td></tr>
+            <!-- TODO(owner): A/C charge per night. -->
+            <tr><th scope="row">Air conditioning</th><td>Extra charge</td></tr>
+            <tr><th scope="row">Jeep safari, trekking and transport</th><td>Prevailing rates</td></tr>
+            <tr><th scope="row">Local sightseeing vehicles<span>Advance notice needed</span></th><td>Prevailing rates</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <p class="tariff-offer">
+      <svg class="icon" aria-hidden="true"><use href="#i-tag" /></svg>
+      <strong>Seasonal and festival offers.</strong> Call or WhatsApp the hosts for an additional discount of up to 50%.
+    </p>
+
+    <div class="cta-row">
+      <a class="link-arrow" href="assets/tariff-poster.jpg" download>Tariff poster (JPG)</a>
+      <a class="link-arrow" href="blue-hills-view-tariff-poster.pdf" download>Tariff sheet (PDF)</a>
+    </div>
+  </div>
+</section>
+<!-- /@section:tariff -->
+<!-- @section:booking -->
+<section class="booking-band section section-grey" id="book" aria-labelledby="booking-title">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="headline" id="booking-title">Check availability</h2>
+      <p class="subhead"><strong>₹4,000</strong> night · plus GST · breakfast for 2</p>
+    </div>
+    <div class="tile booking" id="booking">
+      <form class="booking-form" id="booking-form" novalidate>
+        <div class="date-fields">
+          <label class="field">
+            <span class="field-label">Check-in</span>
+            <input type="date" id="checkin" name="checkin" required />
+          </label>
+          <label class="field">
+            <span class="field-label">Check-out</span>
+            <input type="date" id="checkout" name="checkout" required />
+          </label>
+        </div>
+        <div class="guests">
+          <button class="field guests-toggle" type="button" id="guests-toggle" aria-expanded="false" aria-controls="guests-panel">
+            <span class="field-label">Guests</span>
+            <span id="guests-summary">2 adults</span>
+            <svg class="icon chevron" aria-hidden="true"><use href="#i-down" /></svg>
+          </button>
+          <div class="guests-panel" id="guests-panel" hidden>
+            <div class="stepper" data-key="adults" data-min="1" data-max="10">
+              <div><span class="stepper-label" id="adults-label">Adults</span><span class="stepper-hint">Ages 12 and up</span></div>
+              <div class="stepper-controls">
+                <button type="button" data-step="-1" aria-label="Remove an adult"><svg class="icon" aria-hidden="true"><use href="#i-minus" /></svg></button>
+                <output aria-labelledby="adults-label" aria-live="polite">2</output>
+                <button type="button" data-step="1" aria-label="Add an adult"><svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></button>
+              </div>
+            </div>
+            <div class="stepper" data-key="children" data-min="0" data-max="6">
+              <div><span class="stepper-label" id="children-label">Children</span><span class="stepper-hint">Ages 5 to 11</span></div>
+              <div class="stepper-controls">
+                <button type="button" data-step="-1" aria-label="Remove a child aged 5 to 11"><svg class="icon" aria-hidden="true"><use href="#i-minus" /></svg></button>
+                <output aria-labelledby="children-label" aria-live="polite">0</output>
+                <button type="button" data-step="1" aria-label="Add a child aged 5 to 11"><svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></button>
+              </div>
+            </div>
+            <div class="stepper" data-key="infants" data-min="0" data-max="6">
+              <div><span class="stepper-label" id="infants-label">Little ones</span><span class="stepper-hint">Under 5, stay free</span></div>
+              <div class="stepper-controls">
+                <button type="button" data-step="-1" aria-label="Remove a child under 5"><svg class="icon" aria-hidden="true"><use href="#i-minus" /></svg></button>
+                <output aria-labelledby="infants-label" aria-live="polite">0</output>
+                <button type="button" data-step="1" aria-label="Add a child under 5"><svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></button>
+              </div>
+            </div>
+            <p class="stepper-note">The room rate covers two guests. Guests above 11 need an extra bed.</p>
+          </div>
+        </div>
+
+        <p class="form-error" id="booking-error" role="alert"></p>
+
+        <a class="btn btn-primary btn-block" id="whatsapp-cta" href="https://wa.me/918089000159" target="_blank" rel="noopener">
+          <svg class="icon" aria-hidden="true"><use href="#i-chat" /></svg>Check availability
+        </a>
+        <p class="cta-note">Opens WhatsApp with your dates filled in. The hosts confirm by hand. Nothing is charged here.</p>
+
+        <div class="estimate" id="estimate" aria-live="polite">
+          <p class="estimate-empty" id="estimate-empty">Add your dates to see an estimate.</p>
+          <dl class="estimate-lines" id="estimate-lines"></dl>
+          <p class="estimate-total" id="estimate-total" hidden></p>
+        </div>
+
+        <a class="btn-link" id="email-cta" href="mailto:booking@bluehillsview.com?subject=Booking%20enquiry"><svg class="icon" aria-hidden="true"><use href="#i-mail" /></svg>Or send the enquiry by email</a>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- /@section:booking -->
+<!-- @section:reviews -->
+<section class="reviews section section-white" id="reviews" aria-labelledby="reviews-title">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="headline" id="reviews-title">What guests say</h2>
+      <p class="subhead">Notes guests have shared with the hosts.</p>
+    </div>
+    <!-- TODO(owner): name where these notes came from (Google, Airbnb, guest book…). Add a rating and count only from a real source. -->
+    <ul class="review-list">
+      <li class="tile review">
+        <blockquote>“Uncle Tomy and Molly Aunty made us feel like family.”</blockquote>
+        <p class="review-by"><span class="avatar" aria-hidden="true">B</span>A guest from Bengaluru</p>
+      </li>
+      <li class="tile review">
+        <blockquote>“The green coconut water welcome is unforgettable.”</blockquote>
+        <p class="review-by"><span class="avatar" aria-hidden="true">K</span>A guest from Kochi</p>
+      </li>
+      <li class="tile review">
+        <blockquote>“The kind of quiet you carry home with you.”</blockquote>
+        <p class="review-by"><span class="avatar" aria-hidden="true">M</span>A guest from Mumbai</p>
+      </li>
+    </ul>
+  </div>
+</section>
+<!-- /@section:reviews -->
+<!-- @section:location -->
+<section class="location section section-grey" id="location" aria-labelledby="location-title">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="headline" id="location-title">Where you'll be</h2>
+      <p class="subhead">Paloor, Attapady, Palakkad, Kerala 678582, India</p>
+      <div class="cta-row">
+        <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=11.13325,76.5931667" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-route" /></svg>Get directions</a>
+        <a class="link-arrow" href="https://maps.google.com/?q=11.13325,76.5931667" target="_blank" rel="noopener">Open in Google Maps</a>
+      </div>
+    </div>
+    <div class="location-map">
+      <iframe
+        title="Map showing Blue Hills View in Paloor, Attapady"
+        src="https://www.google.com/maps?q=11.13325,76.5931667&amp;z=12&amp;output=embed"
+        width="1200" height="480" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="bento location-tiles">
+      <div class="tile">
+        <h3>Getting there</h3>
+        <!-- TODO(owner): route from the nearest railway station and airport, road condition for the last stretch, and parking. -->
+        <p>Paloor is in Attapady, in the hills of Palakkad district, near Silent Valley National Park. Send the hosts your route on WhatsApp and they will guide you in; transport can be arranged at prevailing rates.</p>
+      </div>
+      <div class="tile">
+        <h3>Nearby</h3>
+        <!-- TODO(owner): add distances, e.g. Silent Valley (Mukkali), Agali, Mannarkkad, Palakkad Junction, Coimbatore airport. -->
+        <ul class="nearby">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-mountain" /></svg>Silent Valley National Park</li>
         </ul>
-        <h3>Outdoors and trips</h3>
-        <ul class="amenity-list amenity-list-full">
-          <li><svg class="icon" aria-hidden="true"><use href="#i-flame" /></svg><span>Campfire<small>₹500 an hour, wood arranged</small></span></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-speaker" /></svg><span>Bluetooth sound bar<small>Complimentary with the campfire</small></span></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-car" /></svg><span>Jeep safari and transport<small>Prevailing rates</small></span></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-compass" /></svg><span>Guided trekking<small>Prevailing rates</small></span></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-route" /></svg><span>Local sightseeing vehicles<small>Prevailing rates, advance notice</small></span></li>
-        </ul>
-        <h3>Service</h3>
-        <ul class="amenity-list amenity-list-full">
-          <li><svg class="icon" aria-hidden="true"><use href="#i-heart" /></svg>Dedicated 24/7 hospitality</li>
+        <p class="coords muted">11°07'59.7"N 76°35'35.4"E</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /@section:location -->
+<!-- @section:know -->
+<section class="know section section-white" id="know" aria-labelledby="know-title">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="headline" id="know-title">Things to know</h2>
+    </div>
+    <div class="know-grid">
+      <div class="tile">
+        <svg class="icon icon-lg" aria-hidden="true"><use href="#i-house" /></svg>
+        <h3>House rules</h3>
+        <!-- TODO(owner): check-in/check-out times, smoking, pets, quiet hours, visitors. -->
+        <ul>
+          <li>Check-in and check-out times are confirmed by the hosts</li>
+          <li>Lunch and dinner need 24 hours' notice</li>
+          <li>Guests above 11 need an extra bed</li>
         </ul>
       </div>
-    </dialog>
+      <div class="tile">
+        <svg class="icon icon-lg" aria-hidden="true"><use href="#i-calendar" /></svg>
+        <h3>Booking</h3>
+        <ul>
+          <li>Enquiries are confirmed by the hosts on WhatsApp or by phone</li>
+          <li>No payment is taken on this website</li>
+          <li>Prices are plus GST</li>
+        </ul>
+      </div>
+      <div class="tile">
+        <svg class="icon icon-lg" aria-hidden="true"><use href="#i-info" /></svg>
+        <h3>Cancellation</h3>
+        <!-- TODO(owner): cancellation and refund terms. -->
+        <ul>
+          <li>Ask the hosts for cancellation terms before you confirm</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /@section:know -->
+    </main>
 
-    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<!-- @section:footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img class="footer-logo" src="assets/blue-hills-logo.jpg" alt="Blue Hills View, Enjoy the Beauty of Nature" width="520" height="263" loading="lazy" />
+        <p class="muted">A serviced villa for the wild at heart.</p>
+      </div>
+      <div class="footer-col">
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="https://wa.me/918089000159" target="_blank" rel="noopener">WhatsApp +91 80890 00159</a></li>
+          <li><a href="tel:+918089000159">Call +91 80890 00159</a></li>
+          <li><a href="tel:+918086200159">Alternate +91 80862 00159</a></li>
+          <li><a href="mailto:booking@bluehillsview.com">booking@bluehillsview.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2>Find us</h2>
+        <address>Paloor, Attapady<br />Palakkad, Kerala 678582<br />India</address>
+        <ul>
+          <li><a href="https://maps.google.com/?q=11.13325,76.5931667" target="_blank" rel="noopener">Google Maps</a></li>
+          <!-- TODO(owner): confirm this is the right Instagram account (handle from the tariff poster). -->
+          <li><a href="https://www.instagram.com/bluehillsview/" target="_blank" rel="noopener">Instagram @bluehillsview</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">© <span id="year">2026</span> Blue Hills View · Made for the slow days.</p>
+  </div>
+</footer>
+<!-- /@section:footer -->
+<!-- @section:mobilebar -->
+<div class="mobile-bar" id="mobile-bar">
+  <p class="bar-price"><strong id="bar-price">₹4,000</strong> <span id="bar-unit">night</span><span class="bar-sub" id="bar-sub">plus GST · breakfast for 2</span></p>
+  <a class="btn" id="bar-cta" href="#book">Check availability</a>
+</div>
+<!-- /@section:mobilebar -->
+<!-- @section:tour -->
+<dialog class="photo-tour" id="photo-tour" aria-labelledby="tour-title">
+  <div class="tour-head">
+    <button class="icon-btn" type="button" data-close aria-label="Close photos"><svg class="icon" aria-hidden="true"><use href="#i-left" /></svg></button>
+    <h2 id="tour-title">All photos</h2>
+  </div>
+  <div class="tour-body">
+    <nav class="tour-nav" aria-label="Photo groups">
+      <a href="#tour-villa">The villa</a><a href="#tour-campfire">Campfire</a><a href="#tour-views">Views</a><a href="#tour-surrounds">Surrounds</a>
+    </nav>
+    <!-- TODO(owner): add "Rooms" and "Food" groups once photos exist. -->
+    <section class="tour-group" id="tour-villa" aria-labelledby="tg-villa"><h3 id="tg-villa">The villa</h3>
+      <div class="tour-grid"><button type="button" data-index="0" aria-label="Open photo: the villa at night"><img src="assets/photos/villa-evening-640.webp" srcset="assets/photos/villa-evening-640.webp 640w, assets/photos/villa-evening-1000.webp 1000w" sizes="(min-width: 900px) 836px, 100vw" alt="" width="640" height="481" loading="lazy" /></button></div>
+    </section>
+    <section class="tour-group" id="tour-campfire" aria-labelledby="tg-campfire"><h3 id="tg-campfire">Campfire</h3>
+      <div class="tour-grid"><button type="button" data-index="1" aria-label="Open photo: campfire in front of the villa"><img src="assets/photos/campfire-640.webp" srcset="assets/photos/campfire-640.webp 640w, assets/photos/campfire-900.webp 900w" sizes="(min-width: 900px) 836px, 100vw" alt="" width="640" height="850" loading="lazy" /></button></div>
+    </section>
+    <section class="tour-group" id="tour-views" aria-labelledby="tg-views"><h3 id="tg-views">Views</h3>
+      <div class="tour-grid">
+        <button type="button" data-index="2" aria-label="Open photo: clouds over the hills"><img src="assets/photos/mountain-view-640.webp" srcset="assets/photos/mountain-view-640.webp 640w, assets/photos/mountain-view-1100.webp 1100w" sizes="(min-width: 900px) 836px, 100vw" alt="" width="640" height="361" loading="lazy" /></button>
+        <button type="button" data-index="3" aria-label="Open photo: forested peaks"><img src="assets/photos/mountain-hero-640.webp" srcset="assets/photos/mountain-hero-640.webp 640w, assets/photos/mountain-hero-1212.webp 1212w" sizes="(min-width: 900px) 836px, 100vw" alt="" width="640" height="361" loading="lazy" /></button>
+      </div>
+    </section>
+    <section class="tour-group" id="tour-surrounds" aria-labelledby="tg-surrounds"><h3 id="tg-surrounds">Surrounds</h3>
+      <div class="tour-grid"><button type="button" data-index="4" aria-label="Open photo: green hillside"><img src="assets/photos/villa-day-640.webp" srcset="assets/photos/villa-day-640.webp 640w, assets/photos/villa-day-1000.webp 1000w" sizes="(min-width: 900px) 836px, 100vw" alt="" width="640" height="360" loading="lazy" /></button></div>
+    </section>
+  </div>
+</dialog>
+<dialog class="modal" id="amenities-dialog" aria-labelledby="amenities-dialog-title">
+  <div class="modal-head">
+    <button class="icon-btn" type="button" data-close aria-label="Close amenities"><svg class="icon" aria-hidden="true"><use href="#i-x" /></svg></button>
+  </div>
+  <div class="modal-body">
+    <h2 id="amenities-dialog-title">What this place offers</h2>
+    <!-- TODO(owner): Wi-Fi, parking, hot water, power backup, TV, kitchen access — add only what's true. -->
+    <h3>Room</h3>
+    <ul class="amenity-list amenity-list-full">
+      <li><svg class="icon" aria-hidden="true"><use href="#i-mountain" /></svg>Mountain-facing deluxe room</li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-sunrise" /></svg>Private balcony</li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-snowflake" /></svg><span>Air conditioning<small>Extra charge</small></span></li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-bed" /></svg><span>Extra bed<small>₹1,000 a night, breakfast included</small></span></li>
+    </ul>
+    <h3>Food</h3>
+    <ul class="amenity-list amenity-list-full">
+      <li><svg class="icon" aria-hidden="true"><use href="#i-coffee" /></svg><span>South Indian breakfast for 2<small>Complimentary</small></span></li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-utensils" /></svg><span>Lunch and dinner<small>As per menu, with 24 hours' notice</small></span></li>
+    </ul>
+    <h3>Outdoors and trips</h3>
+    <ul class="amenity-list amenity-list-full">
+      <li><svg class="icon" aria-hidden="true"><use href="#i-flame" /></svg><span>Campfire<small>₹500 an hour, wood arranged</small></span></li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-speaker" /></svg><span>Bluetooth sound bar<small>Complimentary with the campfire</small></span></li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-car" /></svg><span>Jeep safari and transport<small>Prevailing rates</small></span></li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-compass" /></svg><span>Guided trekking<small>Prevailing rates</small></span></li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-route" /></svg><span>Local sightseeing vehicles<small>Prevailing rates, advance notice</small></span></li>
+    </ul>
+    <h3>Service</h3>
+    <ul class="amenity-list amenity-list-full">
+      <li><svg class="icon" aria-hidden="true"><use href="#i-heart" /></svg>Dedicated 24/7 hospitality</li>
+    </ul>
+  </div>
+</dialog>
+<!-- /@section:tour -->
+<!-- @section:viewer -->
+<dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+  <div class="lb-head">
+    <button class="lb-btn" type="button" data-close aria-label="Close photo viewer"><svg class="icon" aria-hidden="true"><use href="#i-x" /></svg></button>
+    <span class="lb-counter" id="lb-counter" aria-live="polite"></span>
+  </div>
+  <figure class="lb-stage" id="lb-stage">
+    <img id="lb-img" src="" alt="" />
+    <figcaption id="lb-caption"></figcaption>
+  </figure>
+  <button class="lb-btn lb-prev" type="button" id="lb-prev" aria-label="Previous photo"><svg class="icon" aria-hidden="true"><use href="#i-left" /></svg></button>
+  <button class="lb-btn lb-next" type="button" id="lb-next" aria-label="Next photo"><svg class="icon" aria-hidden="true"><use href="#i-right" /></svg></button>
+</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<!-- /@section:viewer -->
 
     <script src="script.js"></script>
   </body>

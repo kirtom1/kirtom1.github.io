@@ -7,7 +7,7 @@
     <meta name="description" content="Mountain-facing deluxe room from ₹4,000 a night with South Indian breakfast for two. A family-run serviced villa in Paloor, Attapady, Kerala, near Silent Valley National Park. Enquire on WhatsApp." />
     <!-- TODO(owner): switch to https://www.bluehillsview.com/ (named on the tariff poster) if that domain points at this site. -->
     <link rel="canonical" href="https://kirtom1.github.io/" />
-    <meta name="theme-color" content="#fdf8ee" />
+    <meta name="theme-color" content="#ffffff" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 
@@ -65,9 +65,6 @@
       }
     </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="preload" as="image" href="assets/photos/villa-evening-1000.webp" type="image/webp" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -110,6 +107,7 @@
 
     <a class="skip-link" href="#main">Skip to content</a>
 
+<!-- @section:nav -->
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="#top" aria-label="Blue Hills View, back to top">
@@ -127,9 +125,10 @@
         </a>
       </div>
     </header>
+<!-- /@section:nav -->
 
     <main id="main">
-      <!-- 1. Title row -->
+<!-- @section:hero -->
       <section class="container title-row" id="top" aria-labelledby="villa-name">
         <h1 id="villa-name">Blue Hills View</h1>
         <p class="title-sub">Family-run serviced villa near Silent Valley National Park</p>
@@ -143,8 +142,45 @@
           <a class="btn-text" href="https://wa.me/918089000159" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-chat" /></svg>WhatsApp</a>
         </div>
       </section>
-
-      <!-- 2. Gallery -->
+<!-- /@section:hero -->
+<!-- @section:about -->
+<section class="block about">
+            <div class="about-copy">
+              <p class="lead">A private mountain retreat at the edge of Silent Valley. Come for the stillness, stay for the stories.</p>
+              <p>Tucked away in the highlands of Attapady, Blue Hills View is an intimate serviced villa designed for unhurried mornings, long-table dinners, and the rare luxury of doing absolutely nothing.</p>
+              <p>Everything you need. Nothing you don't.</p>
+            </div>
+</section>
+<!-- /@section:about -->
+<!-- @section:highlights -->
+<section class="block">
+            <ul class="highlights">
+              <li>
+                <svg class="icon icon-lg" aria-hidden="true"><use href="#i-mountain" /></svg>
+                <div><h3>Mountain-facing room with a private balcony</h3><p>Sunrise over lush green hills.</p></div>
+              </li>
+              <li>
+                <svg class="icon icon-lg" aria-hidden="true"><use href="#i-coffee" /></svg>
+                <div><h3>Breakfast is included</h3><p>Complimentary South Indian breakfast for two, every morning.</p></div>
+              </li>
+              <li>
+                <svg class="icon icon-lg" aria-hidden="true"><use href="#i-heart" /></svg>
+                <div><h3>Hosts on hand day and night</h3><p>Dedicated 24/7 hospitality from the family who run the villa.</p></div>
+              </li>
+            </ul>
+            <h2 id="amenities-title">What this place offers</h2>
+            <ul class="amenity-list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-mountain" /></svg>Mountain-facing deluxe room</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-sunrise" /></svg>Private balcony</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-coffee" /></svg>South Indian breakfast for 2, included</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-utensils" /></svg>Lunch and dinner on request</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-flame" /></svg>Campfire with wood arranged</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-snowflake" /></svg>Air conditioning (extra charge)</li>
+            </ul>
+            <button class="btn btn-outline" type="button" data-open-dialog="amenities-dialog">Show all 12 amenities</button>
+</section>
+<!-- /@section:highlights -->
+<!-- @section:gallery -->
       <section class="container gallery-section" id="photos" aria-label="Photos">
         <div class="gallery">
           <ul class="gallery-track" id="gallery-track">
@@ -195,59 +231,8 @@
           </button>
         </div>
       </section>
-
-      <!-- 3. Two-column body -->
-      <div class="container listing">
-        <div class="listing-main">
-          <section class="block about" aria-labelledby="about-title">
-            <h2 id="about-title" class="visually-hidden">About this place</h2>
-            <ul class="highlights">
-              <li>
-                <svg class="icon icon-lg" aria-hidden="true"><use href="#i-mountain" /></svg>
-                <div><h3>Mountain-facing room with a private balcony</h3><p>Sunrise over lush green hills.</p></div>
-              </li>
-              <li>
-                <svg class="icon icon-lg" aria-hidden="true"><use href="#i-coffee" /></svg>
-                <div><h3>Breakfast is included</h3><p>Complimentary South Indian breakfast for two, every morning.</p></div>
-              </li>
-              <li>
-                <svg class="icon icon-lg" aria-hidden="true"><use href="#i-heart" /></svg>
-                <div><h3>Hosts on hand day and night</h3><p>Dedicated 24/7 hospitality from the family who run the villa.</p></div>
-              </li>
-            </ul>
-            <div class="about-copy">
-              <p class="lead">A private mountain retreat at the edge of Silent Valley. Come for the stillness, stay for the stories.</p>
-              <p>Tucked away in the highlands of Attapady, Blue Hills View is an intimate serviced villa designed for unhurried mornings, long-table dinners, and the rare luxury of doing absolutely nothing.</p>
-              <p>Everything you need. Nothing you don't.</p>
-            </div>
-          </section>
-
-          <section class="block host" aria-labelledby="host-title">
-            <div class="host-avatar" aria-hidden="true">T&amp;M</div>
-            <div>
-              <!-- TODO(owner): host photo, a two-line bio, languages spoken, and how long they've hosted. -->
-              <h2 id="host-title">Hosted by Tomy and Molly</h2>
-              <p class="muted">Guests know them as Uncle Tomy and Molly Aunty.</p>
-              <div class="host-actions">
-                <a class="btn btn-outline btn-small" href="https://wa.me/918089000159" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-chat" /></svg>Message on WhatsApp</a>
-                <a class="btn btn-outline btn-small" href="tel:+918089000159"><svg class="icon" aria-hidden="true"><use href="#i-phone" /></svg>+91 80890 00159</a>
-              </div>
-            </div>
-          </section>
-
-          <section class="block" id="amenities" aria-labelledby="amenities-title">
-            <h2 id="amenities-title">What this place offers</h2>
-            <ul class="amenity-list">
-              <li><svg class="icon" aria-hidden="true"><use href="#i-mountain" /></svg>Mountain-facing deluxe room</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-sunrise" /></svg>Private balcony</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-coffee" /></svg>South Indian breakfast for 2, included</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-utensils" /></svg>Lunch and dinner on request</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-flame" /></svg>Campfire with wood arranged</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-snowflake" /></svg>Air conditioning (extra charge)</li>
-            </ul>
-            <button class="btn btn-outline" type="button" data-open-dialog="amenities-dialog">Show all 12 amenities</button>
-          </section>
-
+<!-- /@section:gallery -->
+<!-- @section:experiences -->
           <section class="block" id="experiences" aria-labelledby="experiences-title">
             <h2 id="experiences-title">Things to do</h2>
             <p class="section-intro muted">Made for the in-between. The hosts arrange all of these; just ask when you book.</p>
@@ -287,7 +272,8 @@
               </li>
             </ul>
           </section>
-
+<!-- /@section:experiences -->
+<!-- @section:sleep -->
           <section class="block" id="sleep" aria-labelledby="sleep-title">
             <h2 id="sleep-title">Where you'll sleep</h2>
             <!-- TODO(owner): room photo, number of rooms, bed type (e.g. 1 queen bed) and bathroom details. -->
@@ -297,8 +283,22 @@
               <p class="muted">Spacious room for two with a private balcony. An extra bed can be added for a third guest.</p>
             </div>
           </section>
-
-          <!-- 5. Tariff -->
+<!-- /@section:sleep -->
+<!-- @section:host -->
+          <section class="block host" aria-labelledby="host-title">
+            <div class="host-avatar" aria-hidden="true">T&amp;M</div>
+            <div>
+              <!-- TODO(owner): host photo, a two-line bio, languages spoken, and how long they've hosted. -->
+              <h2 id="host-title">Hosted by Tomy and Molly</h2>
+              <p class="muted">Guests know them as Uncle Tomy and Molly Aunty.</p>
+              <div class="host-actions">
+                <a class="btn btn-outline btn-small" href="https://wa.me/918089000159" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-chat" /></svg>Message on WhatsApp</a>
+                <a class="btn btn-outline btn-small" href="tel:+918089000159"><svg class="icon" aria-hidden="true"><use href="#i-phone" /></svg>+91 80890 00159</a>
+              </div>
+            </div>
+          </section>
+<!-- /@section:host -->
+<!-- @section:tariff -->
           <section class="block" id="tariff" aria-labelledby="tariff-title">
             <h2 id="tariff-title">Tariff</h2>
             <p class="section-intro muted">All prices in rupees, plus GST. <!-- TODO(owner): state the GST rate. --></p>
@@ -353,9 +353,8 @@
               <a href="blue-hills-view-tariff-poster.pdf" download><svg class="icon" aria-hidden="true"><use href="#i-download" /></svg>Tariff sheet (PDF)</a>
             </p>
           </section>
-        </div>
-
-        <!-- 4. Booking card (bottom sheet on small screens) -->
+<!-- /@section:tariff -->
+<!-- @section:booking -->
         <aside class="booking-col" aria-label="Booking enquiry">
           <div class="booking-backdrop" id="booking-backdrop" hidden></div>
           <div class="booking" id="booking" aria-labelledby="booking-title">
@@ -427,9 +426,8 @@
             </form>
           </div>
         </aside>
-      </div>
-
-      <!-- 6. Reviews -->
+<!-- /@section:booking -->
+<!-- @section:reviews -->
       <section class="container block wide" id="reviews" aria-labelledby="reviews-title">
         <h2 id="reviews-title">What guests say</h2>
         <!-- TODO(owner): name where these notes came from (Google, Airbnb, guest book…). Add a rating and count only from a real source. -->
@@ -449,8 +447,8 @@
           </li>
         </ul>
       </section>
-
-      <!-- 7. Location -->
+<!-- /@section:reviews -->
+<!-- @section:location -->
       <section class="container block wide" id="location" aria-labelledby="location-title">
         <h2 id="location-title">Where you'll be</h2>
         <p class="location-address">Paloor, Attapady, Palakkad, Kerala 678582, India</p>
@@ -480,8 +478,8 @@
           </div>
         </div>
       </section>
-
-      <!-- 8. Things to know -->
+<!-- /@section:location -->
+<!-- @section:know -->
       <section class="container block wide" id="know" aria-labelledby="know-title">
         <h2 id="know-title">Things to know</h2>
         <div class="know-grid">
@@ -511,9 +509,10 @@
           </div>
         </div>
       </section>
+<!-- /@section:know -->
     </main>
 
-    <!-- 9. Footer -->
+<!-- @section:footer -->
     <footer class="site-footer">
       <div class="container">
         <div class="footer-grid">
@@ -543,14 +542,14 @@
         <p class="footer-bottom">© <span id="year">2026</span> Blue Hills View · Made for the slow days.</p>
       </div>
     </footer>
-
-    <!-- Mobile booking bar -->
+<!-- /@section:footer -->
+<!-- @section:mobilebar -->
     <div class="mobile-bar">
       <p><strong id="bar-price">₹4,000</strong> <span id="bar-unit">night</span><span class="bar-sub" id="bar-sub">plus GST · breakfast for 2</span></p>
       <button class="btn btn-primary" type="button" id="open-sheet" aria-controls="booking" aria-expanded="false">Check availability</button>
     </div>
-
-    <!-- All photos -->
+<!-- /@section:mobilebar -->
+<!-- @section:dialogs -->
     <dialog class="photo-tour" id="photo-tour" aria-labelledby="tour-title">
       <div class="tour-head">
         <button class="icon-btn" type="button" data-close aria-label="Close photos"><svg class="icon" aria-hidden="true"><use href="#i-left" /></svg></button>
@@ -629,6 +628,7 @@
     </dialog>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<!-- /@section:dialogs -->
 
     <script src="script.js"></script>
   </body>

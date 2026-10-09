@@ -714,6 +714,63 @@ address { font-style: normal; }
 }
 /* /@section:reviews */
 
+/* @section:location */
+.location .location-map {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--white);
+}
+
+.location .location-map iframe {
+  display: block;
+  width: 100%;
+  height: 320px;
+  border: 0;
+}
+
+.location .location-tiles {
+  margin-top: var(--sp-3);
+}
+
+.location .tile h3 {
+  font-size: var(--fs-tile);
+  font-weight: 600;
+  letter-spacing: var(--ls-tight);
+  margin-bottom: var(--sp-3);
+}
+
+.location .nearby {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.location .nearby li {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.location .nearby .icon {
+  color: var(--blue);
+}
+
+.location .coords {
+  margin-top: var(--sp-4);
+  font-size: var(--fs-small);
+}
+
+@media (min-width: 768px) {
+  .location .location-map iframe {
+    height: 480px;
+  }
+
+  .location .location-tiles {
+    margin-top: var(--sp-4);
+  }
+}
+/* /@section:location */
+
 /* @end-sections */
 
 /* ---------- Motion ---------- */

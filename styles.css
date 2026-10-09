@@ -539,6 +539,32 @@ address { font-style: normal; }
 }
 /* /@section:experiences */
 
+/* @section:sleep */
+.sleep .tile.sleep-card {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sleep .tile.sleep-card .icon {
+  display: block;
+  margin: 0 auto var(--sp-4);
+  color: var(--blue);
+}
+
+.sleep .tile.sleep-card h3 {
+  font-size: var(--fs-tile);
+  font-weight: 600;
+  letter-spacing: var(--ls-tight);
+}
+
+@media (min-width: 768px) {
+  .sleep .tile.sleep-card {
+    max-width: 640px;
+  }
+}
+/* /@section:sleep */
+
 /* @end-sections */
 
 /* ---------- Motion ---------- */

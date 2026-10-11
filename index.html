@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <!-- GitHub Pages can't send headers, so CSP lives here; frame-ancestors is ignored in a meta tag. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; frame-src https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'none'" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <title>Blue Hills View · Serviced villa in Attapady, Kerala, near Silent Valley</title>
     <meta name="description" content="Mountain-facing deluxe room from ₹4,000 a night with South Indian breakfast for two. A family-run serviced villa in Paloor, Attapady, Kerala, near Silent Valley National Park. Enquire on WhatsApp." />
     <!-- TODO(owner): switch to https://www.bluehillsview.com/ (named on the tariff poster) if that domain points at this site. -->
@@ -502,7 +505,7 @@
       <iframe
         title="Map showing Blue Hills View in Paloor, Attapady"
         src="https://www.google.com/maps?q=11.13325,76.5931667&amp;z=12&amp;output=embed"
-        width="1200" height="480" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        width="1200" height="480" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
     </div>
     <div class="bento location-tiles">
       <div class="tile">
